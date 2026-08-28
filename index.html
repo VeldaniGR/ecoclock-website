@@ -132,6 +132,7 @@
   --accent:var(--teal-600);
   --accent-ink:#fff;
   --scrim:rgba(10,20,15,.08);
+  --ig-accent:#cc7722; /* ocre */
 }
 
 /* ---- theme tokens: crepúsculo (dusk / medium) ---- */
@@ -146,6 +147,7 @@
   --accent:var(--coral-500);
   --accent-ink:#241206;
   --scrim:rgba(0,0,0,.35);
+  --ig-accent:#f5f0e6; /* blanco roto */
 }
 
 /* ---- theme tokens: noche (dark) ---- */
@@ -160,6 +162,7 @@
   --accent:var(--leaf-400);
   --accent-ink:#0c1712;
   --scrim:rgba(0,0,0,.55);
+  --ig-accent:#39ff14; /* verde neón */
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -186,7 +189,7 @@ button{font-family:inherit}
 
 h1,h2,h3{font-family:var(--font-display); margin:0; font-weight:600; letter-spacing:-.01em}
 
-.eyebrow--hero{color:var(--coral-400)}
+.eyebrow.eyebrow--hero{color:var(--parchment)}
 .eyebrow{
   font-family:var(--font-mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
   color:var(--accent); font-weight:600;
@@ -233,6 +236,16 @@ h1,h2,h3{font-family:var(--font-display); margin:0; font-weight:600; letter-spac
   content:"⌄"; position:absolute; inset-inline-end:12px; top:50%; transform:translateY(-55%);
   pointer-events:none; color:var(--text-dim); font-size:.8rem;
 }
+
+.ig-link{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:38px; height:38px; border-radius:50%; flex:none;
+  border:1px solid var(--border); background:var(--surface);
+  color:var(--ig-accent);
+  transition:transform var(--dur-fast) ease, background var(--dur-fast) ease;
+}
+.ig-link:hover{ transform:translateY(-1px); background:var(--surface-2); }
+.ig-link svg{ width:20px; height:20px; display:block }
 
 /* =================== HERO =================== */
 .hero{
@@ -412,6 +425,19 @@ section{padding-block:64px}
 .note .ico{font-size:1.2rem; flex:none; margin-top:1px}
 .note strong{color:var(--text); display:block; margin-bottom:3px; font-weight:600}
 
+/* =================== SOS SECTION =================== */
+.sos-section{margin-top:64px}
+.sos-disclaimer{
+  display:flex; gap:14px; align-items:flex-start;
+  background:var(--surface-2); border:1px solid var(--danger); border-radius:var(--radius-md);
+  padding:18px 20px; margin:24px 0 32px;
+}
+.sos-disclaimer .ico{font-size:1.3rem; flex:none; margin-top:1px}
+.sos-disclaimer strong{display:block; color:var(--danger); font-family:var(--font-display); font-size:1.05rem; margin-bottom:6px}
+.sos-disclaimer p{margin:0; color:var(--text-dim); font-size:.92rem; line-height:1.6}
+.sos-how h3{font-size:1.05rem; margin-bottom:10px; color:var(--text)}
+.sos-how ol{margin:0 0 28px; padding-left:20px; color:var(--text-dim); font-size:.95rem; line-height:1.7}
+
 /* =================== FOOTER =================== */
 footer{border-top:1px solid var(--border); padding-block:52px 40px; background:var(--surface)}
 .footer-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:44px}
@@ -521,13 +547,20 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
           <option value="auto" data-i18n="theme_auto"></option>
         </select>
       </div>
+      <a class="ig-link" href="https://www.instagram.com/ecoclock_network?igsh=Yndwb21sNDImajJs" target="_blank" rel="noopener" aria-label="Instagram — Eco'clock Network">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="17.35" cy="6.65" r="1.15" fill="currentColor"/>
+        </svg>
+      </a>
     </div>
   </div>
 </div>
 
 <header class="hero">
   <div class="hero-bg bg-forest">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Forest_dark.jpg?width=1600"
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/North_Carolina_Forest_Service_Prescribed_Fire_Behavior.jpg?width=1600"
          alt="" loading="eager">
   </div>
   <div class="hero-bg bg-coral">
@@ -550,7 +583,7 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
         <span class="btn-beta-badge" data-i18n="badge_beta"></span>
         <span data-i18n="download_beta"></span>
       </a>
-      <a class="btn btn-ghost" href="#estado" data-i18n="hero_scroll_cta"></a>
+      <a class="btn btn-ghost" href="#sos" data-i18n="hero_sos_cta"></a>
     </div>
     <a class="scroll-cue" href="#estado">
       <span data-i18n="hero_scroll_cta"></span> <span class="chev">⌄</span>
@@ -706,6 +739,36 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
       <div><strong data-i18n="demo_note_title"></strong><span data-i18n="demo_note_body"></span></div>
     </div>
   </section>
+
+  <section id="sos" class="container sos-section">
+    <div class="section-headrow section-head">
+      <div>
+        <h2>⚠️​ Under construction ⚠️​</h2>
+        <span class="eyebrow" data-i18n="sos_eyebrow"></span>
+        <h2>Eco'clock S.O.S.</h2>
+        <p data-i18n="sos_subtitle"></p>
+      </div>
+    </div>
+
+    <div class="sos-disclaimer">
+      <span class="ico" aria-hidden="true">⚠️</span>
+      <div>
+        <strong data-i18n="sos_disclaimer_title"></strong>
+        <p data-i18n="sos_disclaimer_body"></p>
+      </div>
+    </div>
+
+    <div class="sos-how">
+      <h3 data-i18n="sos_how_title"></h3>
+      <ol>
+        <li data-i18n="sos_step1"></li>
+        <li data-i18n="sos_step2"></li>
+        <li data-i18n="sos_step3"></li>
+      </ol>
+    </div>
+
+    <a class="btn btn-primary" href="https://crisis-activa.org" target="_blank" rel="noopener" data-i18n="sos_cta"></a>
+  </section>
 </main>
 
 <footer>
@@ -726,7 +789,7 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
       <p style="color:var(--text-dim); font-size:.72rem; margin-top:8px; max-width:46ch" data-i18n="footer_legal_note"></p>
       <p style="color:var(--text-dim); font-size:.72rem; margin-top:10px; font-family:var(--font-mono)">
         <span data-i18n="photo_credit_label"></span>:
-        <a href="https://commons.wikimedia.org/wiki/File:Forest_dark.jpg" target="_blank" rel="noopener" style="color:inherit">Forest dark</a> ·
+        <a href="https://commons.wikimedia.org/wiki/Special:FilePath/North_Carolina_Forest_Service_Prescribed_Fire_Behavior.jpg" target="_blank" rel="noopener" style="color:inherit">Forest Fire Behavior</a> ·
         <a href="https://commons.wikimedia.org/wiki/File:Underwater_photo_of_coral_reef.jpg" target="_blank" rel="noopener" style="color:inherit">Underwater photo of coral reef</a>
         — Wikimedia Commons, <span data-i18n="photo_credit_pd"></span>
       </p>
@@ -838,7 +901,7 @@ es:{translation:{
   hero_eyebrow:"Monitor ambiental en tiempo real · 2026",
   hero_title_line1:"El planeta sangra.", hero_title_line2:"Los datos no mienten.",
   hero_subtitle:"Cada segundo, Eco'clock reúne los registros públicos de bosques, arrecifes, hielo, agua, energía y delitos ambientales en un único tablero. Mira. Comparte. Actúa.",
-  badge_beta:"BETA", download_beta:"Descargar Beta", hero_scroll_cta:"Ver el estado del planeta",
+  badge_beta:"BETA", download_beta:"Descargar Beta", hero_scroll_cta:"Ver el estado del planeta", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Estado actual", status_title:"Dos señales que más preocupan",
   status_subtitle:"La deforestación y el blanqueamiento de coral concentran el mayor riesgo de pérdida irreversible. El resto de indicadores completa el panorama.",
   manual_refresh:"Actualizar ahora",
@@ -870,6 +933,15 @@ es:{translation:{
   ,donate_bizum:"Bizum (España) — próximamente"                                                                                                                                                                   
   ,donate_swift:"Transferencia SWIFT internacional — próximamente"                                                                                                                                                
   ,donate_email:"Contacto directo"                                                                                                                                                                                
+  ,sos_eyebrow:"Respuesta rápida"
+  ,sos_subtitle:"Cuando ocurre una catástrofe, no hay tiempo para esperar datos verificados. Eco'clock canaliza donaciones hacia organizaciones de respuesta inmediata mientras la información sigue llegando."
+  ,sos_disclaimer_title:"Antes de donar, lee esto"
+  ,sos_disclaimer_body:"Las donaciones de esta sección se destinan a organizaciones que, según la información disponible en cada momento, están respondiendo a catástrofes naturales o crisis humanitarias urgentes. A diferencia de los indicadores ambientales del resto de la app —basados en registros públicos y verificados mediante cómputo distribuido—, los datos sobre una catástrofe en curso suelen ser escasos, cambiantes y difíciles de contrastar en tiempo real. Por el carácter urgente de estas situaciones, Eco'clock no puede garantizar la exactitud de la magnitud de los daños reportados ni el uso final que cada organización dé a los fondos recibidos. Nos comprometemos a mostrar toda la información disponible sobre cada caso, tal y como la recibimos, pero la decisión de donar es responsabilidad exclusiva de cada donante, bajo su propio criterio."
+  ,sos_how_title:"Cómo funciona"
+  ,sos_step1:"Cada crisis activa se publica en la app con la información disponible en ese momento (fuente, alcance estimado, organización receptora)."
+  ,sos_step2:"Donas directamente a la organización elegida; Eco'clock no retiene ni gestiona los fondos."
+  ,sos_step3:"Actualizamos la ficha de la crisis a medida que llega nueva información contrastable."
+  ,sos_cta:"Ver crisis activas en la app"
 }},
 en:{translation:{
   lang_label:"Language", theme_label:"View", theme_day:"Day", theme_dusk:"Dusk", theme_night:"Night", theme_auto:"Auto",
@@ -877,7 +949,7 @@ en:{translation:{
   hero_eyebrow:"Real-time environmental monitor · 2026",
   hero_title_line1:"The planet is bleeding.", hero_title_line2:"The data doesn't lie.",
   hero_subtitle:"Every second, Eco'clock brings together public records on forests, reefs, ice, water, energy and environmental crime in a single dashboard. Watch. Share. Act.",
-  badge_beta:"BETA", download_beta:"Download Beta", hero_scroll_cta:"See the planet's status",
+  badge_beta:"BETA", download_beta:"Download Beta", hero_scroll_cta:"See the planet's status", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Current status", status_title:"Two signals we watch closest",
   status_subtitle:"Deforestation and coral bleaching carry the highest risk of irreversible loss. The other indicators fill out the picture.",
   manual_refresh:"Refresh now",
@@ -909,6 +981,15 @@ en:{translation:{
   ,donate_bizum:"Bizum (Spain) — coming soon"                                                                                                                                                                   
   ,donate_swift:"International SWIFT transfer — coming soon"                                                                                                                                                
   ,donate_email:"Direct contact"
+  ,sos_eyebrow:"Rapid response"
+  ,sos_subtitle:"When disaster strikes, there's no time to wait for verified data. Eco'clock channels donations to first-response organizations while information keeps coming in."
+  ,sos_disclaimer_title:"Read this before donating"
+  ,sos_disclaimer_body:"Donations in this section go to organizations that, according to the information available at the time, are responding to natural disasters or urgent humanitarian crises. Unlike the environmental indicators in the rest of the app — based on public records and verified through distributed computing — data on an unfolding disaster is usually scarce, changing and hard to cross-check in real time. Because of how urgent these situations are, Eco'clock cannot guarantee the accuracy of reported damage figures or how each organization ultimately uses the funds it receives. We commit to showing all available information on each case as we receive it, but the decision to donate is each donor's own responsibility, made at their own discretion."
+  ,sos_how_title:"How it works"
+  ,sos_step1:"Each active crisis is published in the app with the information available at that time (source, estimated scope, receiving organization)."
+  ,sos_step2:"You donate directly to the chosen organization; Eco'clock does not hold or manage the funds."
+  ,sos_step3:"We update the crisis page as new, checkable information comes in."
+  ,sos_cta:"See active crises in the app"
 }},
 fr:{translation:{
   lang_label:"Langue", theme_label:"Affichage", theme_day:"Jour", theme_dusk:"Crépuscule", theme_night:"Nuit", theme_auto:"Auto",
@@ -916,7 +997,7 @@ fr:{translation:{
   hero_eyebrow:"Moniteur environnemental en temps réel · 2026",
   hero_title_line1:"La planète saigne.", hero_title_line2:"Les données ne mentent pas.",
   hero_subtitle:"Chaque seconde, Eco'clock réunit les registres publics sur les forêts, les récifs, la glace, l'eau, l'énergie et la criminalité environnementale dans un seul tableau de bord. Regardez. Partagez. Agissez.",
-  badge_beta:"BÊTA", download_beta:"Télécharger la bêta", hero_scroll_cta:"Voir l'état de la planète",
+  badge_beta:"BÊTA", download_beta:"Télécharger la bêta", hero_scroll_cta:"Voir l'état de la planète", hero_sos_cta:"S.O.S.",
   status_eyebrow:"État actuel", status_title:"Deux signaux à surveiller de près",
   status_subtitle:"La déforestation et le blanchissement des coraux concentrent le plus grand risque de perte irréversible. Les autres indicateurs complètent le tableau.",
   manual_refresh:"Actualiser",
@@ -948,6 +1029,15 @@ fr:{translation:{
   ,donate_bizum:"Bizum (Espagne) — bientôt disponible"                                                                                                                                                                   
   ,donate_swift:"Virement international SWIFT — bientôt disponible"                                                                                                                                                
   ,donate_email:"Contact direct"
+  ,sos_eyebrow:"Intervention rapide"
+  ,sos_subtitle:"En cas de catastrophe, il n'y a pas de temps à perdre à attendre des données vérifiées. Eco'clock achemine les dons vers les organismes de première intervention tout en continuant de recevoir des informations au fil de l'eau."
+  ,sos_disclaimer_title:"Lisez ceci avant de faire un don"
+  ,sos_disclaimer_body:"Les dons effectués dans cette section sont destinés à des organisations qui, selon les informations disponibles à ce moment-là, interviennent face à des catastrophes naturelles ou à des crises humanitaires urgentes. Contrairement aux indicateurs environnementaux figurant ailleurs dans l'application — qui reposent sur des données publiques et sont vérifiés grâce au calcul distribué — les informations concernant une catastrophe en cours sont généralement rares, évolutives et difficiles à recouper en temps réel. En raison de l'urgence de ces situations, Eco'clock ne peut garantir l'exactitude des chiffres relatifs aux dommages signalés ni la manière dont chaque organisation utilise finalement les fonds reçus. Nous nous engageons à communiquer toutes les informations disponibles pour chaque situation à mesure que nous les recevons ; toutefois, la décision de faire un don relève de la seule responsabilité du donateur, qui agit à sa propre discrétion."
+  ,sos_how_title:"Comment ça marche"
+  ,sos_step1:"Chaque crise en cours est publiée dans l'application avec les informations disponibles à ce moment-là (source, ampleur estimée, organisation destinataire)."
+  ,sos_step2:"Vous faites un don directement à l'organisation choisie ; Eco'clock ne détient ni ne gère les fonds."
+  ,sos_step3:"Nous mettons à jour la page consacrée à la crise à mesure que nous parviennent des informations nouvelles et vérifiables."
+  ,sos_cta:"Consultez les crises en cours dans l'application"
 }},
 de:{translation:{
   lang_label:"Sprache", theme_label:"Ansicht", theme_day:"Tag", theme_dusk:"Dämmerung", theme_night:"Nacht", theme_auto:"Automatisch",
@@ -955,7 +1045,7 @@ de:{translation:{
   hero_eyebrow:"Umweltmonitor in Echtzeit · 2026",
   hero_title_line1:"Der Planet blutet.", hero_title_line2:"Die Daten lügen nicht.",
   hero_subtitle:"Jede Sekunde bündelt Eco'clock öffentliche Daten zu Wäldern, Riffen, Eis, Wasser, Energie und Umweltkriminalität in einem einzigen Dashboard. Beobachten. Teilen. Handeln.",
-  badge_beta:"BETA", download_beta:"Beta herunterladen", hero_scroll_cta:"Zustand des Planeten ansehen",
+  badge_beta:"BETA", download_beta:"Beta herunterladen", hero_scroll_cta:"Zustand des Planeten ansehen", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Aktueller Stand", status_title:"Zwei Signale, die uns am meisten beunruhigen",
   status_subtitle:"Entwaldung und Korallenbleiche bergen das größte Risiko irreversibler Verluste. Die übrigen Indikatoren vervollständigen das Bild.",
   manual_refresh:"Jetzt aktualisieren",
@@ -987,6 +1077,15 @@ de:{translation:{
   ,donate_bizum:"Bizum (Spanien) – demnächst verfügbar"                                                                                                                                                                   
   ,donate_swift:"Internationale SWIFT-Überweisung – demnächst verfügbar"                                                                                                                                                
   ,donate_email:"Direkter Kontakt"
+  ,sos_eyebrow:"Schnelle Reaktion"
+  ,sos_subtitle:"Wenn eine Katastrophe eintritt, bleibt keine Zeit, auf verifizierte Daten zu warten. Eco'clock leitet Spenden an Ersthelfer-Organisationen weiter, während laufend neue Informationen eingehen."
+  ,sos_disclaimer_title:"Lesen Sie dies, bevor Sie spenden."
+  ,sos_disclaimer_body:"Spenden in diesem Bereich gehen an Organisationen, die – nach aktuellem Kenntnisstand – auf Naturkatastrophen oder akute humanitäre Krisen reagieren. Im Gegensatz zu den Umweltindikatoren im übrigen Teil der App, die auf öffentlich zugänglichen Daten basieren und mittels Distributed Computing verifiziert werden, sind Informationen zu laufenden Katastrophen meist spärlich, verändern sich ständig und lassen sich in Echtzeit nur schwer unabhängig überprüfen. Aufgrund der Dringlichkeit solcher Situationen kann Eco'clock weder die Genauigkeit gemeldeter Schadenszahlen noch die tatsächliche Verwendung der Spendengelder durch die jeweilige Organisation garantieren. Wir verpflichten uns, alle verfügbaren Informationen zu den jeweiligen Fällen unmittelbar nach deren Eingang offenzulegen; die Entscheidung zur Spende liegt jedoch im alleinigen Ermessen der jeweiligen Spenderin oder des jeweiligen Spenders."
+  ,sos_how_title:"How it works"
+  ,sos_step1:"Jede aktive Krise wird in der App mit den zu diesem Zeitpunkt verfügbaren Informationen (Quelle, geschätzter Umfang, empfangende Organisation) veröffentlicht."
+  ,sos_step2:"Sie spenden direkt an die ausgewählte Organisation; Eco'clock verwahrt oder verwaltet die Gelder nicht."
+  ,sos_step3:"Wir aktualisieren die Krisenseite, sobald neue, überprüfbare Informationen vorliegen."
+  ,sos_cta:"Aktive Krisen in der App anzeigen"
 }},
 it:{translation:{
   lang_label:"Lingua", theme_label:"Vista", theme_day:"Giorno", theme_dusk:"Crepuscolo", theme_night:"Notte", theme_auto:"Automatico",
@@ -994,7 +1093,7 @@ it:{translation:{
   hero_eyebrow:"Monitor ambientale in tempo reale · 2026",
   hero_title_line1:"Il pianeta sanguina.", hero_title_line2:"I dati non mentono.",
   hero_subtitle:"Ogni secondo, Eco'clock riunisce i registri pubblici su foreste, barriere coralline, ghiaccio, acqua, energia e reati ambientali in un'unica dashboard. Guarda. Condividi. Agisci.",
-  badge_beta:"BETA", download_beta:"Scarica la Beta", hero_scroll_cta:"Guarda lo stato del pianeta",
+  badge_beta:"BETA", download_beta:"Scarica la Beta", hero_scroll_cta:"Guarda lo stato del pianeta", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Stato attuale", status_title:"Due segnali che ci preoccupano di più",
   status_subtitle:"La deforestazione e lo sbiancamento dei coralli concentrano il rischio più alto di perdita irreversibile. Gli altri indicatori completano il quadro.",
   manual_refresh:"Aggiorna ora",
@@ -1026,6 +1125,15 @@ it:{translation:{
   ,donate_bizum:"Bizum (Spagna) — in arrivo"                                                                                                                                                                   
   ,donate_swift:"Bonifico internazionale SWIFT — in arrivo"                                                                                                                                                
   ,donate_email:"Contatto diretto"
+  ,sos_eyebrow:"Risposta rapida"
+  ,sos_subtitle:"Quando si verifica un disastro, non c'è tempo di attendere dati verificati. Eco'clock convoglia le donazioni verso le organizzazioni di primo intervento mentre continuano ad arrivare informazioni."
+  ,sos_disclaimer_title:"Leggi questo prima di donare"
+  ,sos_disclaimer_body:"Le donazioni effettuate tramite questa sezione sono destinate a organizzazioni che, in base alle informazioni disponibili al momento, stanno intervenendo in risposta a disastri naturali o crisi umanitarie urgenti. A differenza degli indicatori ambientali presenti nel resto dell'app — basati su dati pubblici e verificati tramite calcolo distribuito — le informazioni relative a un'emergenza in corso sono solitamente scarse, soggette a variazioni e difficili da verificare incrociatamente in tempo reale. Data l'urgenza di tali situazioni, Eco'clock non può garantire l'accuratezza delle stime sui danni riportati né le modalità con cui ciascuna organizzazione utilizzerà effettivamente i fondi ricevuti. Ci impegniamo a fornire tutte le informazioni disponibili su ogni caso man mano che le riceviamo; tuttavia, la decisione di effettuare una donazione resta di esclusiva responsabilità del donatore, che agisce a propria discrezione."
+  ,sos_how_title:"Come funziona"
+  ,sos_step1:"Ogni crisi in corso viene pubblicata nell'app con le informazioni disponibili in quel momento (fonte, portata stimata, organizzazione ricevente)."
+  ,sos_step2:"Effettui la donazione direttamente all'organizzazione scelta; Eco'clock non detiene né gestisce i fondi."
+  ,sos_step3:"Aggiorniamo la pagina dedicata alla crisi man mano che arrivano nuove informazioni verificabili."
+  ,sos_cta:"Visualizza le crisi in corso nell'app"
 }},
 pt:{translation:{
   lang_label:"Idioma", theme_label:"Visualização", theme_day:"Dia", theme_dusk:"Crepúsculo", theme_night:"Noite", theme_auto:"Automático",
@@ -1033,7 +1141,7 @@ pt:{translation:{
   hero_eyebrow:"Monitor ambiental em tempo real · 2026",
   hero_title_line1:"O planeta está sangrando.", hero_title_line2:"Os dados não mentem.",
   hero_subtitle:"A cada segundo, o Eco'clock reúne registros públicos de florestas, recifes, gelo, água, energia e crimes ambientais em um único painel. Veja. Compartilhe. Aja.",
-  badge_beta:"BETA", download_beta:"Baixar Beta", hero_scroll_cta:"Ver o estado do planeta",
+  badge_beta:"BETA", download_beta:"Baixar Beta", hero_scroll_cta:"Ver o estado do planeta", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Estado atual", status_title:"Dois sinais que mais preocupam",
   status_subtitle:"O desmatamento e o branqueamento de corais concentram o maior risco de perda irreversível. Os demais indicadores completam o panorama.",
   manual_refresh:"Atualizar agora",
@@ -1065,6 +1173,15 @@ pt:{translation:{
   ,donate_bizum:"Bizum (Espanha) — em breve"                                                                                                                                                                   
   ,donate_swift:"Transferência internacional via SWIFT — em breve"                                                                                                                                                
   ,donate_email:"Contato direto"
+  ,sos_eyebrow:"Resposta rápida"
+  ,sos_subtitle:"Quando um desastre ocorre, não há tempo a perder esperando por dados confirmados. A Eco'clock canaliza doações para organizações de resposta imediata enquanto as informações continuam chegando."
+  ,sos_disclaimer_title:"Leia isto antes de doar"
+  ,sos_disclaimer_body:"As doações desta seção destinam-se a organizações que, com base nas informações disponíveis no momento, estão atuando em resposta a desastres naturais ou crises humanitárias urgentes. Ao contrário dos indicadores ambientais presentes nas demais partes do aplicativo — que se baseiam em registros públicos e são verificados por meio de computação distribuída —, os dados sobre desastres em curso costumam ser escassos, variáveis ​​e de difícil verificação cruzada em tempo real. Dada a urgência dessas situações, o Eco'clock não pode garantir a precisão dos números de danos relatados nem a forma como cada organização utiliza, em última análise, os recursos recebidos. Comprometemo-nos a divulgar todas as informações disponíveis sobre cada caso à medida que as recebemos; no entanto, a decisão de doar é de responsabilidade exclusiva de cada doador, cabendo a ele próprio fazê-la a seu critério."
+  ,sos_how_title:"Como funciona"
+  ,sos_step1:"Cada crise ativa é publicada no aplicativo com as informações disponíveis naquele momento (fonte, abrangência estimada, organização receptora)."
+  ,sos_step2:"Você doa diretamente para a organização escolhida; a Eco'clock não retém nem gerencia os recursos."
+  ,sos_step3:"Atualizamos a página sobre a crise à medida que novas informações verificáveis ​​são recebidas."
+  ,sos_cta:"Veja as crises ativas no aplicativo"
 }},
 zh:{translation:{
   lang_label:"语言", theme_label:"视图", theme_day:"白天", theme_dusk:"黄昏", theme_night:"夜晚", theme_auto:"自动",
@@ -1072,7 +1189,7 @@ zh:{translation:{
   hero_eyebrow:"实时环境监测 · 2026",
   hero_title_line1:"地球在流血。", hero_title_line2:"数据不会说谎。",
   hero_subtitle:"Eco'clock 每一秒都在汇集森林、珊瑚礁、冰层、水资源、能源和环境犯罪的公开数据，呈现在一个仪表盘中。查看。分享。行动。",
-  badge_beta:"测试版", download_beta:"下载测试版", hero_scroll_cta:"查看地球现状",
+  badge_beta:"测试版", download_beta:"下载测试版", hero_scroll_cta:"查看地球现状", hero_sos_cta:"S.O.S.",
   status_eyebrow:"当前状态", status_title:"最值得关注的两个信号",
   status_subtitle:"森林砍伐和珊瑚白化带来的不可逆损失风险最高，其余指标则补全了全貌。",
   manual_refresh:"立即刷新",
@@ -1104,6 +1221,15 @@ zh:{translation:{
   ,donate_bizum:"Bizum（西班牙）—即將推出"                                                                                                                                                                   
   ,donate_swift:"國際 SWIFT 轉帳－即將推出"                                                                                                                                                
   ,donate_email:"直接聯繫"
+  ,sos_eyebrow:"快速回應"
+  ,sos_subtitle:"災難降臨時，往往來不及等待經核實的數據。 Eco'clock 能夠在資訊不斷湧入的同時，將捐款輸送給第一線救援組織。"
+  ,sos_disclaimer_title:"捐贈前請閱讀此內容"
+  ,sos_disclaimer_body:"本版塊的捐款將提供給那些正針對自然災害或緊急人道危機開展應對工作的組織（基於當時可取得的資訊）。與應用中其他基於公開記錄並透過分散式運算驗證的環境指標不同，關於正在發生的災害，相關數據往往稀缺且不斷變化，難以即時交叉核實。鑑於此類情況的緊迫性，Eco'clock 無法保證所報告的受災數據完全準確，也無法保證各組織最終如何使用所獲資金。我們承諾在收到相關資訊後即時展示所有可用資料，但捐贈與否完全由捐贈者自行決定並承擔相應責任。"
+  ,sos_how_title:"運作方式"
+  ,sos_step1:"每項處於活躍狀態的危機都會連同當時掌握的資訊（來源、預期影響範圍、接收機構）在應用程式中發布。"
+  ,sos_step2:"您直接向選定的組織捐款；Eco'clock 不持有或管理這些資金。"
+  ,sos_step3:"我們會隨著新的、可核實資訊的到來，更新危機頁面。"
+  ,sos_cta:"在應用程式中查看當前的危機狀況"
 }},
 ja:{translation:{
   lang_label:"言語", theme_label:"表示", theme_day:"昼", theme_dusk:"たそがれ", theme_night:"夜", theme_auto:"自動",
@@ -1111,7 +1237,7 @@ ja:{translation:{
   hero_eyebrow:"リアルタイム環境モニター · 2026",
   hero_title_line1:"地球は血を流している。", hero_title_line2:"データは嘘をつかない。",
   hero_subtitle:"Eco'clockは、毎秒、森林・サンゴ礁・氷・水・エネルギー・環境犯罪に関する公開データをひとつのダッシュボードに集約します。見る。共有する。行動する。",
-  badge_beta:"ベータ", download_beta:"ベータ版をダウンロード", hero_scroll_cta:"地球の現状を見る",
+  badge_beta:"ベータ", download_beta:"ベータ版をダウンロード", hero_scroll_cta:"地球の現状を見る", hero_sos_cta:"S.O.S.",
   status_eyebrow:"現在の状況", status_title:"特に注視すべき2つの兆候",
   status_subtitle:"森林伐採とサンゴの白化は、不可逆的な損失のリスクが最も高い指標です。その他の指標が全体像を補います。",
   manual_refresh:"今すぐ更新",
@@ -1143,6 +1269,15 @@ ja:{translation:{
   ,donate_bizum:"Bizum（スペイン）— 近日対応予定"                                                                                                                                                                   
   ,donate_swift:"SWIFT国際送金 — 近日開始予定"                                                                                                                                                
   ,donate_email:"直接の連絡"
+  ,sos_eyebrow:"迅速な対応"
+  ,sos_subtitle:"災害発生時、確実なデータが揃うのを待っている余裕はありません。Eco'clockは、次々と情報が寄せられる中で、初動対応を行う組織へと寄付を届けます。"
+  ,sos_disclaimer_title:"寄付の前にこちらをお読みください"
+  ,sos_disclaimer_body:"このセクションでの寄付は、現時点で入手可能な情報に基づき、自然災害や緊急の人道危機に対応している団体に対して行われます。アプリの他の部分で扱われる環境指標（これらは公開データに基づき、分散コンピューティングによって検証されています）とは異なり、進行中の災害に関するデータは通常、不足しがちで絶えず変化しており、リアルタイムでの相互検証も困難です。こうした状況の緊急性に鑑み、Eco'clockは、報告された被害数値の正確性や、各団体が受け取った資金を最終的にどのように使用するかについて、一切の保証をいたしかねます。私たちは各事例について入手した情報をすべて公開するよう努めますが、寄付を行うかどうかの判断は、寄付者ご自身の責任と裁量においてなされるものです。"
+  ,sos_how_title:"仕組み"
+  ,sos_step1:"進行中の各危機事態は、その時点で入手可能な情報（発生源、推定される規模、対応機関）とともにアプリ上で公開されます。"
+  ,sos_step2:"選定された団体へ直接寄付を行います。Eco'clockが資金を預かったり管理したりすることはありません。"
+  ,sos_step3:"確認可能な新しい情報が入り次第、危機対応ページを更新します。"
+  ,sos_cta:"アプリで現在進行中の危機的状況を確認する"
 }},
 ru:{translation:{
   lang_label:"Язык", theme_label:"Вид", theme_day:"День", theme_dusk:"Сумерки", theme_night:"Ночь", theme_auto:"Авто",
@@ -1150,7 +1285,7 @@ ru:{translation:{
   hero_eyebrow:"Экологический монитор в реальном времени · 2026",
   hero_title_line1:"Планета истекает кровью.", hero_title_line2:"Данные не лгут.",
   hero_subtitle:"Каждую секунду Eco'clock объединяет открытые данные о лесах, рифах, льдах, воде, энергетике и экологических преступлениях на одной панели. Смотрите. Делитесь. Действуйте.",
-  badge_beta:"БЕТА", download_beta:"Скачать бету", hero_scroll_cta:"Смотреть состояние планеты",
+  badge_beta:"БЕТА", download_beta:"Скачать бету", hero_scroll_cta:"Смотреть состояние планеты", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Текущее состояние", status_title:"Два сигнала, которые тревожат больше всего",
   status_subtitle:"Вырубка лесов и обесцвечивание кораллов несут наибольший риск необратимых потерь. Остальные показатели дополняют картину.",
   manual_refresh:"Обновить сейчас",
@@ -1182,6 +1317,15 @@ ru:{translation:{
   ,donate_bizum:"Bizum (Испания) — скоро"                                                                                                                                                                   
   ,donate_swift:"Международный перевод SWIFT — скоро"                                                                                                                                                
   ,donate_email:"Прямой контакт"
+  ,sos_eyebrow:"Оперативное реагирование"
+  ,sos_subtitle:"Когда случается беда, нет времени ждать подтвержденных данных. Eco'clock направляет пожертвования организациям, первыми прибывающим на место происшествия, в то время как информация продолжает поступать."
+  ,sos_disclaimer_title:"Прочтите это перед тем, как сделать пожертвование"
+  ,sos_disclaimer_body:"Пожертвования в этом разделе направляются организациям, которые на текущий момент реагируют на стихийные бедствия или острые гуманитарные кризисы. В отличие от экологических показателей в других разделах приложения — основанных на открытых данных и проверенных с помощью распределенных вычислений, — информация о развивающемся бедствии, как правило, скудна, изменчива, и ее сложно перепроверить в режиме реального времени. Учитывая неотложный характер таких ситуаций, Eco'clock не может гарантировать точность данных о масштабах ущерба или то, как именно каждая организация в конечном итоге распорядится полученными средствами. Мы обязуемся публиковать всю имеющуюся информацию по каждому случаю по мере ее поступления, однако решение о пожертвовании остается на усмотрение самого донора и принимается им под собственную ответственность."
+  ,sos_how_title:"Как это работает"
+  ,sos_step1:"Информация о каждой текущей кризисной ситуации публикуется в приложении с учетом данных, доступных на тот момент (источник, предполагаемый масштаб, принимающая организация)."
+  ,sos_step2:"Вы делаете пожертвование напрямую выбранной организации; Eco'clock не хранит эти средства и не управляет ими."
+  ,sos_step3:"Мы обновляем страницу, посвященную кризисной ситуации, по мере поступления новой, поддающейся проверке информации."
+  ,sos_cta:"Смотрите информацию об активных кризисных ситуациях в приложении."
 }},
 ar:{translation:{
   lang_label:"اللغة", theme_label:"المظهر", theme_day:"نهار", theme_dusk:"غسق", theme_night:"ليل", theme_auto:"تلقائي",
@@ -1189,7 +1333,7 @@ ar:{translation:{
   hero_eyebrow:"مراقبة بيئية في الوقت الفعلي · 2026",
   hero_title_line1:"الكوكب ينزف.", hero_title_line2:"البيانات لا تكذب.",
   hero_subtitle:"في كل ثانية، يجمع Eco'clock سجلات عامة عن الغابات والشعاب المرجانية والجليد والمياه والطاقة والجرائم البيئية في لوحة واحدة. شاهد. شارك. تحرّك.",
-  badge_beta:"تجريبي", download_beta:"تنزيل النسخة التجريبية", hero_scroll_cta:"عرض حالة الكوكب",
+  badge_beta:"تجريبي", download_beta:"تنزيل النسخة التجريبية", hero_scroll_cta:"عرض حالة الكوكب", hero_sos_cta:"S.O.S.",
   status_eyebrow:"الحالة الراهنة", status_title:"إشارتان تستحقان أكبر قدر من الاهتمام",
   status_subtitle:"تركّز إزالة الغابات وابيضاض المرجان أكبر قدر من مخاطر الفقدان الذي لا يمكن تداركه، بينما تكمل بقية المؤشرات الصورة العامة.",
   manual_refresh:"تحديث الآن",
@@ -1221,6 +1365,15 @@ ar:{translation:{
   ,donate_bizum:"Bizum (إسبانيا) — قريباً"                                                                                                                                                                   
   ,donate_swift:"تحويل دولي عبر نظام سويفت (SWIFT) — قريباً"                                                                                                                                                
   ,donate_email:"اتصال مباشر"
+  ,sos_eyebrow:"استجابة سريعة"
+  ,sos_subtitle:"عند وقوع الكوارث، لا يوجد وقت لانتظار بيانات مؤكدة؛ لذا تقوم Eco'clock بتوجيه التبرعات إلى منظمات الاستجابة الأولية بالتزامن مع استمرار تدفق المعلومات."
+  ,sos_disclaimer_title:"اقرأ هذا قبل التبرع"
+  ,sos_disclaimer_body:"تُخصص التبرعات في هذا القسم للمنظمات التي تعمل -وفقاً للمعلومات المتاحة في حينه- على الاستجابة للكوارث الطبيعية أو الأزمات الإنسانية العاجلة. وعلى عكس المؤشرات البيئية الأخرى في التطبيق -التي تستند إلى سجلات عامة ويتم التحقق منها عبر الحوسبة الموزعة- فإن البيانات المتعلقة بالكوارث الجارية غالباً ما تكون شحيحة ومتغيرة ويصعب التحقق من دقتها ومطابقتها في الوقت الفعلي. ونظراً للطابع العاجل لهذه الحالات، لا يمكن لتطبيق Eco'clock ضمان دقة الأرقام المُعلن عنها بشأن حجم الأضرار، أو كيفية استخدام كل منظمة للأموال التي تتلقاها في نهاية المطاف. ومع ذلك، فإننا نلتزم بعرض كافة المعلومات المتاحة حول كل حالة فور تلقيها، إلا أن قرار التبرع يظل مسؤولية المتبرع وحده، ويتخذه وفقاً لتقديره الشخصي."
+  ,sos_how_title:"كيفية العمل"
+  ,sos_step1:"يتم نشر كل أزمة نشطة في التطبيق مع المعلومات المتاحة في ذلك الوقت (المصدر، والنطاق التقديري، والجهة المتلقية)."
+  ,sos_step2:"أنت تتبرع مباشرةً للمنظمة المختارة؛ ولا تقوم Eco'clock بحيازة الأموال أو إدارتها."
+  ,sos_step3:"نقوم بتحديث صفحة الأزمة كلما وردت معلومات جديدة يمكن التحقق منها."
+  ,sos_cta:"اطلع على الأزمات النشطة في التطبيق"
 }}
 };
 
