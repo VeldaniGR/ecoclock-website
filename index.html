@@ -902,54 +902,6 @@ const LOCALE_MAP = {
 
 /* ---------- 2) I18N RESOURCES ---------- */
 const I18N_RESOURCES = {
-es:{translation:{
-  lang_label:"Idioma", theme_label:"Vista", theme_day:"Día", theme_dusk:"Crepúsculo", theme_night:"Noche", theme_auto:"Automático",
-  hero_local_time_label:"Tu hora local",
-  hero_eyebrow:"Monitor ambiental en tiempo real · 2026",
-  hero_title_line1:"El planeta sangra.", hero_title_line2:"Los datos no mienten.",
-  hero_subtitle:"Cada segundo, Eco'clock reúne los registros públicos de bosques, arrecifes, hielo, agua, energía y delitos ambientales en un único tablero. Mira. Comparte. Actúa.",
-  badge_beta:"BETA", download_beta:"Descargar Beta", hero_scroll_cta:"Ver el estado del planeta", hero_sos_cta:"S.O.S.",
-  status_eyebrow:"Estado actual", status_title:"Dos señales que más preocupan",
-  status_subtitle:"La deforestación y el blanqueamiento de coral concentran el mayor riesgo de pérdida irreversible. El resto de indicadores completa el panorama.",
-  manual_refresh:"Actualizar ahora",
-  card_deforestation_title:"Deforestación", card_deforestation_desc:"Alertas de pérdida de cobertura arbórea detectadas por satélite.",
-  stat_area_lost:"Superficie perdida (24 h, estimado)", stat_alerts:"Alertas GLAD activas", stat_top_region:"Región con más alertas",
-  status_demo:"Demo", last_updated:"Actualizado", next_update:"Próxima actualización",
-  card_coral_title:"Arrecifes de coral", card_coral_desc:"Estrés térmico y blanqueamiento en los arrecifes monitoreados.",
-  stat_bleaching:"Nivel de blanqueamiento", stat_reef_stress:"Arrecifes bajo estrés térmico", stat_watch_region:"Región en vigilancia",
-  secondary_title:"El resto de la red",
-  card_energy_title:"Energía", stat_co2:"Emisiones de CO₂ (energía, anual)", stat_renewables:"Participación renovable",
-  card_water_title:"Agua y agricultura", stat_water_stress:"Índice de estrés hídrico", stat_withdrawal:"Uso agrícola sobre el total de agua dulce",
-  card_ice_title:"Hielo marino", stat_ice_extent:"Extensión del hielo ártico", stat_ice_anomaly:"Anomalía vs. promedio 1981–2010",
-  card_ozone_title:"Capa de ozono", stat_ozone_hole:"Área del agujero de ozono", stat_ozone_status:"Estado",
-  card_crime_title:"Delitos ambientales", stat_cases:"Casos reportados (trimestre)", stat_top_type:"Tipo más frecuente",
-  demo_note_title:"Sobre estos datos",
-  demo_note_body:"Los datos que ves son valores de referencia con cadencia real, publicados por cada organismo. La conexión en vivo requiere un proxy backend con claves API registradas; se desplegará por fases a lo largo de 2026.",
-  footer_disclaimer:"Eco'clock Network no está afiliado a las organizaciones citadas; enlaza y referencia sus datos públicos.",
-  footer_sources_title:"Fuentes de datos", footer_rights:"Proyecto de Eco'clock Network — asociación en constitución (2026).",
-  download_modal_title:"Eco'clock Beta", download_modal_body:"La beta aún no tiene un paquete público. Este botón ya está listo para enlazar tu instalador, TestFlight o tienda de apps en cuanto lo publiques.", download_modal_close:"Entendido",
-  unit_ha:"ha", unit_gt_co2:"Gt CO₂", unit_million_km2:"millones de km²", anomaly_label:"Anomalía",
-    badge_live:"LIVE", badge_ref:"REF", banner_offline:"Conexión parcial con las fuentes — algunos datos pueden no estar disponibles ahora mismo.",
-  val_deforestation_region:"Cuenca del Amazonas (Brasil)", val_coral_watch_region:"Gran Barrera de Coral (Australia)",
-  val_coral_bleaching_level:"Alerta 2 (vigilancia elevada)", val_ozone_status:"Recuperación gradual en curso",
-  val_crime_top_type:"Tráfico de fauna silvestre",
-  photo_credit_label:"Fotografías", photo_credit_pd:"dominio público",
-  donate_now:"Donar ahora", donate_modal_title:"Donaciones", donate_modal_body:"Las donaciones económicas no están activas por el momento. Descubre otras maneras de apoyar este proyecto."
-  ,footer_legal_note:"Mientras la asociación no esté inscrita, Eco'clock Network opera como proyecto personal; no emite facturas ni certificados de donación con validez fiscal."
-  ,donate_stripe:"Stripe (targeta) — próximamente"                                                                                                                                                                
-  ,donate_bizum:"Bizum (España) — próximamente"                                                                                                                                                                   
-  ,donate_swift:"Transferencia SWIFT internacional — próximamente"                                                                                                                                                
-  ,donate_email:"Contacto directo"                                                                                                                                                                                
-  ,sos_eyebrow:"Respuesta rápida"
-  ,sos_subtitle:"Cuando ocurre una catástrofe, no hay tiempo para esperar datos verificados. Eco'clock canaliza donaciones hacia organizaciones de respuesta inmediata mientras la información sigue llegando."
-  ,sos_disclaimer_title:"Antes de donar, lee esto"
-  ,sos_disclaimer_body:"Las donaciones de esta sección se destinan a organizaciones que, según la información disponible en cada momento, están respondiendo a catástrofes naturales o crisis humanitarias urgentes. A diferencia de los indicadores ambientales del resto de la app —basados en registros públicos y verificados mediante cómputo distribuido—, los datos sobre una catástrofe en curso suelen ser escasos, cambiantes y difíciles de contrastar en tiempo real. Por el carácter urgente de estas situaciones, Eco'clock no puede garantizar la exactitud de la magnitud de los daños reportados ni el uso final que cada organización dé a los fondos recibidos. Nos comprometemos a mostrar toda la información disponible sobre cada caso, tal y como la recibimos, pero la decisión de donar es responsabilidad exclusiva de cada donante, bajo su propio criterio."
-  ,sos_how_title:"Cómo funciona"
-  ,sos_step1:"Cada crisis activa se publica en la app con la información disponible en ese momento (fuente, alcance estimado, organización receptora)."
-  ,sos_step2:"Donas directamente a la organización elegida; Eco'clock no retiene ni gestiona los fondos."
-  ,sos_step3:"Actualizamos la ficha de la crisis a medida que llega nueva información contrastable."
-  ,sos_cta:"Ver crisis activas en la app"
-}},
 ca:{translation:{
   lang_label:"Idioma", theme_label:"Vista", theme_day:"Dia", theme_dusk:"Crepuscle", theme_night:"Nit", theme_auto:"Automàtic",
   hero_local_time_label:"La teva hora local",
@@ -997,6 +949,54 @@ ca:{translation:{
   ,sos_step2:"Dones directament a l'organització escollida; Eco'clock no reté ni gestiona els fons."
   ,sos_step3:"Actualitzem la fitxa de la crisi a mesura que arriba nova informació contrastable."
   ,sos_cta:"Veure crisis actives a l'app"
+}},
+es:{translation:{
+  lang_label:"Idioma", theme_label:"Vista", theme_day:"Día", theme_dusk:"Crepúsculo", theme_night:"Noche", theme_auto:"Automático",
+  hero_local_time_label:"Tu hora local",
+  hero_eyebrow:"Monitor ambiental en tiempo real · 2026",
+  hero_title_line1:"El planeta sangra.", hero_title_line2:"Los datos no mienten.",
+  hero_subtitle:"Cada segundo, Eco'clock reúne los registros públicos de bosques, arrecifes, hielo, agua, energía y delitos ambientales en un único tablero. Mira. Comparte. Actúa.",
+  badge_beta:"BETA", download_beta:"Descargar Beta", hero_scroll_cta:"Ver el estado del planeta", hero_sos_cta:"S.O.S.",
+  status_eyebrow:"Estado actual", status_title:"Dos señales que más preocupan",
+  status_subtitle:"La deforestación y el blanqueamiento de coral concentran el mayor riesgo de pérdida irreversible. El resto de indicadores completa el panorama.",
+  manual_refresh:"Actualizar ahora",
+  card_deforestation_title:"Deforestación", card_deforestation_desc:"Alertas de pérdida de cobertura arbórea detectadas por satélite.",
+  stat_area_lost:"Superficie perdida (24 h, estimado)", stat_alerts:"Alertas GLAD activas", stat_top_region:"Región con más alertas",
+  status_demo:"Demo", last_updated:"Actualizado", next_update:"Próxima actualización",
+  card_coral_title:"Arrecifes de coral", card_coral_desc:"Estrés térmico y blanqueamiento en los arrecifes monitoreados.",
+  stat_bleaching:"Nivel de blanqueamiento", stat_reef_stress:"Arrecifes bajo estrés térmico", stat_watch_region:"Región en vigilancia",
+  secondary_title:"El resto de la red",
+  card_energy_title:"Energía", stat_co2:"Emisiones de CO₂ (energía, anual)", stat_renewables:"Participación renovable",
+  card_water_title:"Agua y agricultura", stat_water_stress:"Índice de estrés hídrico", stat_withdrawal:"Uso agrícola sobre el total de agua dulce",
+  card_ice_title:"Hielo marino", stat_ice_extent:"Extensión del hielo ártico", stat_ice_anomaly:"Anomalía vs. promedio 1981–2010",
+  card_ozone_title:"Capa de ozono", stat_ozone_hole:"Área del agujero de ozono", stat_ozone_status:"Estado",
+  card_crime_title:"Delitos ambientales", stat_cases:"Casos reportados (trimestre)", stat_top_type:"Tipo más frecuente",
+  demo_note_title:"Sobre estos datos",
+  demo_note_body:"Los datos que ves son valores de referencia con cadencia real, publicados por cada organismo. La conexión en vivo requiere un proxy backend con claves API registradas; se desplegará por fases a lo largo de 2026.",
+  footer_disclaimer:"Eco'clock Network no está afiliado a las organizaciones citadas; enlaza y referencia sus datos públicos.",
+  footer_sources_title:"Fuentes de datos", footer_rights:"Proyecto de Eco'clock Network — asociación en constitución (2026).",
+  download_modal_title:"Eco'clock Beta", download_modal_body:"La beta aún no tiene un paquete público. Este botón ya está listo para enlazar tu instalador, TestFlight o tienda de apps en cuanto lo publiques.", download_modal_close:"Entendido",
+  unit_ha:"ha", unit_gt_co2:"Gt CO₂", unit_million_km2:"millones de km²", anomaly_label:"Anomalía",
+    badge_live:"LIVE", badge_ref:"REF", banner_offline:"Conexión parcial con las fuentes — algunos datos pueden no estar disponibles ahora mismo.",
+  val_deforestation_region:"Cuenca del Amazonas (Brasil)", val_coral_watch_region:"Gran Barrera de Coral (Australia)",
+  val_coral_bleaching_level:"Alerta 2 (vigilancia elevada)", val_ozone_status:"Recuperación gradual en curso",
+  val_crime_top_type:"Tráfico de fauna silvestre",
+  photo_credit_label:"Fotografías", photo_credit_pd:"dominio público",
+  donate_now:"Donar ahora", donate_modal_title:"Donaciones", donate_modal_body:"Las donaciones económicas no están activas por el momento. Descubre otras maneras de apoyar este proyecto."
+  ,footer_legal_note:"Mientras la asociación no esté inscrita, Eco'clock Network opera como proyecto personal; no emite facturas ni certificados de donación con validez fiscal."
+  ,donate_stripe:"Stripe (targeta) — próximamente"                                                                                                                                                                
+  ,donate_bizum:"Bizum (España) — próximamente"                                                                                                                                                                   
+  ,donate_swift:"Transferencia SWIFT internacional — próximamente"                                                                                                                                                
+  ,donate_email:"Contacto directo"                                                                                                                                                                                
+  ,sos_eyebrow:"Respuesta rápida"
+  ,sos_subtitle:"Cuando ocurre una catástrofe, no hay tiempo para esperar datos verificados. Eco'clock canaliza donaciones hacia organizaciones de respuesta inmediata mientras la información sigue llegando."
+  ,sos_disclaimer_title:"Antes de donar, lee esto"
+  ,sos_disclaimer_body:"Las donaciones de esta sección se destinan a organizaciones que, según la información disponible en cada momento, están respondiendo a catástrofes naturales o crisis humanitarias urgentes. A diferencia de los indicadores ambientales del resto de la app —basados en registros públicos y verificados mediante cómputo distribuido—, los datos sobre una catástrofe en curso suelen ser escasos, cambiantes y difíciles de contrastar en tiempo real. Por el carácter urgente de estas situaciones, Eco'clock no puede garantizar la exactitud de la magnitud de los daños reportados ni el uso final que cada organización dé a los fondos recibidos. Nos comprometemos a mostrar toda la información disponible sobre cada caso, tal y como la recibimos, pero la decisión de donar es responsabilidad exclusiva de cada donante, bajo su propio criterio."
+  ,sos_how_title:"Cómo funciona"
+  ,sos_step1:"Cada crisis activa se publica en la app con la información disponible en ese momento (fuente, alcance estimado, organización receptora)."
+  ,sos_step2:"Donas directamente a la organización elegida; Eco'clock no retiene ni gestiona los fondos."
+  ,sos_step3:"Actualizamos la ficha de la crisis a medida que llega nueva información contrastable."
+  ,sos_cta:"Ver crisis activas en la app"
 }},
 eu:{translation:{
   lang_label:"Hizkuntza", theme_label:"Ikuspegia", theme_day:"Eguna", theme_dusk:"Ilunabarra", theme_night:"Gaua", theme_auto:"Automatikoa",
