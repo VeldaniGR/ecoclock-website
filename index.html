@@ -21,6 +21,8 @@
 -->
 <link rel="canonical" href="https://app.ecoclock.example/">
 <link rel="alternate" hreflang="es" href="https://app.ecoclock.example/?lang=es">
+<link rel="alternate" hreflang="ca" href="https://app.ecoclock.example/?lang=ca">
+<link rel="alternate" hreflang="eu" href="https://app.ecoclock.example/?lang=eu">
 <link rel="alternate" hreflang="en" href="https://app.ecoclock.example/?lang=en">
 <link rel="alternate" hreflang="fr" href="https://app.ecoclock.example/?lang=fr">
 <link rel="alternate" hreflang="de" href="https://app.ecoclock.example/?lang=de">
@@ -45,6 +47,8 @@
 <meta property="og:description" content="El pulso del planeta, medido cada 6 a 12 horas. Bosques, arrecifes, hielo, agua, energía y delitos ambientales en un único tablero.">
 <meta property="og:url" content="https://app.ecoclock.example/">
 <meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
+<meta property="og:locale:alternate" content="eu_ES">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:locale:alternate" content="de_DE">
@@ -527,6 +531,8 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
         <label class="visually-hidden" for="langSelect" data-i18n="lang_label"></label>
         <select id="langSelect" aria-label="Idioma / Language">
           <option value="es">Español</option>
+          <option value="ca">Català</option>
+          <option value="eu">Euskera</option>
           <option value="en">English</option>
           <option value="fr">Français</option>
           <option value="de">Deutsch</option>
@@ -767,7 +773,7 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
       </ol>
     </div>
 
-    <a class="btn btn-primary" href="https://crisis.ecoclock.org" target="_blank" rel="noopener" data-i18n="sos_cta"></a>
+    <a class="btn btn-primary" href="https://www.crisis.ecoclock.org" target="_blank" rel="noopener" data-i18n="sos_cta"></a>
   </section>
 </main>
 
@@ -886,11 +892,12 @@ const SITE_CONFIG = {
   },
 };
 
-const SUPPORTED_LANGS = ['es','en','fr','de','it','pt','zh','ja','ru','ar'];
+const SUPPORTED_LANGS = ['es','en','fr','de','it','pt','zh','ja','ru','ar','ca','eu'];
 const RTL_LANGS = ['ar'];
 const LOCALE_MAP = {
   es:'es-ES', en:'en-US', fr:'fr-FR', de:'de-DE', it:'it-IT',
-  pt:'pt-PT', zh:'zh-CN', ja:'ja-JP', ru:'ru-RU', ar:'ar-SA'
+  pt:'pt-PT', zh:'zh-CN', ja:'ja-JP', ru:'ru-RU', ar:'ar-SA',
+  ca:'ca-ES', eu:'eu-ES'
 };
 
 /* ---------- 2) I18N RESOURCES ---------- */
@@ -942,6 +949,102 @@ es:{translation:{
   ,sos_step2:"Donas directamente a la organización elegida; Eco'clock no retiene ni gestiona los fondos."
   ,sos_step3:"Actualizamos la ficha de la crisis a medida que llega nueva información contrastable."
   ,sos_cta:"Ver crisis activas en la app"
+}},
+ca:{translation:{
+  lang_label:"Idioma", theme_label:"Vista", theme_day:"Dia", theme_dusk:"Crepuscle", theme_night:"Nit", theme_auto:"Automàtic",
+  hero_local_time_label:"La teva hora local",
+  hero_eyebrow:"Monitor ambiental en temps real · 2026",
+  hero_title_line1:"El planeta sagna.", hero_title_line2:"Les dades no menteixen.",
+  hero_subtitle:"Cada segon, Eco'clock reuneix els registres públics de boscos, esculls, gel, aigua, energia i delictes ambientals en un únic tauler. Mira. Comparteix. Actua.",
+  badge_beta:"BETA", download_beta:"Descarregar Beta", hero_scroll_cta:"Veure l'estat del planeta", hero_sos_cta:"S.O.S.",
+  status_eyebrow:"Estat actual", status_title:"Dos senyals que més preocupen",
+  status_subtitle:"La desforestació i el blanqueig de corall concentren el major risc de pèrdua irreversible. La resta d'indicadors completa el panorama.",
+  manual_refresh:"Actualitzar ara",
+  card_deforestation_title:"Desforestació", card_deforestation_desc:"Alertes de pèrdua de cobertura arbòria detectades per satèl·lit.",
+  stat_area_lost:"Superfície perduda (24 h, estimat)", stat_alerts:"Alertes GLAD actives", stat_top_region:"Regió amb més alertes",
+  status_demo:"Demo", last_updated:"Actualitzat", next_update:"Propera actualització",
+  card_coral_title:"Esculls de corall", card_coral_desc:"Estrès tèrmic i blanqueig als esculls monitorats.",
+  stat_bleaching:"Nivell de blanqueig", stat_reef_stress:"Esculls sota estrès tèrmic", stat_watch_region:"Regió en vigilància",
+  secondary_title:"La resta de la xarxa",
+  card_energy_title:"Energia", stat_co2:"Emissions de CO₂ (energia, anual)", stat_renewables:"Participació renovable",
+  card_water_title:"Aigua i agricultura", stat_water_stress:"Índex d'estrès hídric", stat_withdrawal:"Ús agrícola sobre el total d'aigua dolça",
+  card_ice_title:"Gel marí", stat_ice_extent:"Extensió del gel àrtic", stat_ice_anomaly:"Anomalia vs. mitjana 1981–2010",
+  card_ozone_title:"Capa d'ozó", stat_ozone_hole:"Àrea del forat d'ozó", stat_ozone_status:"Estat",
+  card_crime_title:"Delictes ambientals", stat_cases:"Casos reportats (trimestre)", stat_top_type:"Tipus més freqüent",
+  demo_note_title:"Sobre aquestes dades",
+  demo_note_body:"Les dades que veus són valors de referència amb cadència real, publicats per cada organisme. La connexió en directe requereix un proxy backend amb claus API registrades; es desplegarà per fases al llarg del 2026.",
+  footer_disclaimer:"Eco'clock Network no està afiliada a les organitzacions citades; enllaça i referencia les seves dades públiques.",
+  footer_sources_title:"Fonts de dades", footer_rights:"Projecte d'Eco'clock Network — associació en constitució (2026).",
+  download_modal_title:"Eco'clock Beta", download_modal_body:"La beta encara no té un paquet públic. Aquest botó ja està preparat per enllaçar el teu instal·lador, TestFlight o botiga d'aplicacions quan el publiquis.", download_modal_close:"Entès",
+  unit_ha:"ha", unit_gt_co2:"Gt CO₂", unit_million_km2:"milions de km²", anomaly_label:"Anomalia",
+  badge_live:"LIVE", badge_ref:"REF", banner_offline:"Connexió parcial amb les fonts — algunes dades poden no estar disponibles ara mateix.",
+  val_deforestation_region:"Conca de l'Amazones (Brasil)", val_coral_watch_region:"Gran Barrera de Corall (Austràlia)",
+  val_coral_bleaching_level:"Alerta 2 (vigilància elevada)", val_ozone_status:"Recuperació gradual en curs",
+  val_crime_top_type:"Tràfic de fauna silvestre",
+  photo_credit_label:"Fotografies", photo_credit_pd:"domini públic",
+  donate_now:"Donar ara", donate_modal_title:"Donacions", donate_modal_body:"Les donacions econòmiques no estan actives per ara. Descobreix altres maneres de donar suport a aquest projecte."
+  ,footer_legal_note:"Mentre l'associació no estigui inscrita, Eco'clock Network opera com a projecte personal; no emet factures ni certificats de donació amb validesa fiscal."
+  ,donate_stripe:"Stripe (targeta) — properament"
+  ,donate_bizum:"Bizum (Espanya) — properament"
+  ,donate_swift:"Transferència SWIFT internacional — properament"
+  ,donate_email:"Contacte directe"
+  ,sos_eyebrow:"Resposta ràpida"
+  ,sos_subtitle:"Quan passa una catàstrofe, no hi ha temps per esperar dades verificades. Eco'clock canalitza donacions cap a organitzacions de resposta immediata mentre la informació continua arribant."
+  ,sos_disclaimer_title:"Abans de donar, llegeix això"
+  ,sos_disclaimer_body:"Les donacions d'aquesta secció es destinen a organitzacions que, segons la informació disponible en cada moment, estan responent a catàstrofes naturals o crisis humanitàries urgents. A diferència dels indicadors ambientals de la resta de l'app —basats en registres públics i verificats mitjançant còmput distribuït—, les dades sobre una catàstrofe en curs solen ser escasses, canviants i difícils de contrastar en temps real. Pel caràcter urgent d'aquestes situacions, Eco'clock no pot garantir l'exactitud de la magnitud dels danys reportats ni l'ús final que cada organització doni als fons rebuts. Ens comprometem a mostrar tota la informació disponible sobre cada cas, tal com la rebem, però la decisió de donar és responsabilitat exclusiva de cada donant, sota el seu propi criteri."
+  ,sos_how_title:"Com funciona"
+  ,sos_step1:"Cada crisi activa es publica a l'app amb la informació disponible en aquell moment (font, abast estimat, organització receptora)."
+  ,sos_step2:"Dones directament a l'organització escollida; Eco'clock no reté ni gestiona els fons."
+  ,sos_step3:"Actualitzem la fitxa de la crisi a mesura que arriba nova informació contrastable."
+  ,sos_cta:"Veure crisis actives a l'app"
+}},
+eu:{translation:{
+  lang_label:"Hizkuntza", theme_label:"Ikuspegia", theme_day:"Eguna", theme_dusk:"Ilunabarra", theme_night:"Gaua", theme_auto:"Automatikoa",
+  hero_local_time_label:"Zure ordu lokala",
+  hero_eyebrow:"Ingurumen-monitorea denbora errealean · 2026",
+  hero_title_line1:"Planeta odoletan dago.", hero_title_line2:"Datuek ez dute gezurrik esaten.",
+  hero_subtitle:"Segundoro, Eco'clock-ek basoen, itsas arrezifeen, izotzaren, uraren, energiaren eta ingurumen-delituen erregistro publikoak biltzen ditu panel bakar batean. Begiratu. Partekatu. Ekin.",
+  badge_beta:"BETA", download_beta:"Beta deskargatu", hero_scroll_cta:"Ikusi planetaren egoera", hero_sos_cta:"S.O.S.",
+  status_eyebrow:"Egungo egoera", status_title:"Kezka handiena sortzen duten bi seinaleak",
+  status_subtitle:"Baso-soiltzeak eta koralen zuritzeak dute galera itzulezinaren arriskurik handiena. Gainerako adierazleek panorama osatzen dute.",
+  manual_refresh:"Eguneratu orain",
+  card_deforestation_title:"Baso-soiltzea", card_deforestation_desc:"Satelite bidez hautemandako zuhaitz-estalduraren galera-alertak.",
+  stat_area_lost:"Galdutako azalera (24 h, kalkulatua)", stat_alerts:"GLAD alerta aktiboak", stat_top_region:"Alerta gehien dituen eskualdea",
+  status_demo:"Demoa", last_updated:"Eguneratuta", next_update:"Hurrengo eguneratzea",
+  card_coral_title:"Itsas arrezifeak", card_coral_desc:"Estres termikoa eta zuritzea kontrolatutako arrezifeetan.",
+  stat_bleaching:"Zuritze-maila", stat_reef_stress:"Estres termikopean dauden arrezifeak", stat_watch_region:"Zaintzapeko eskualdea",
+  secondary_title:"Sarearen gainerakoa",
+  card_energy_title:"Energia", stat_co2:"CO₂ isuriak (energia, urtekoa)", stat_renewables:"Energia berriztagarrien parte-hartzea",
+  card_water_title:"Ura eta nekazaritza", stat_water_stress:"Ur-estresaren indizea", stat_withdrawal:"Nekazaritza-erabilera ur gezaren guztizkoarekiko",
+  card_ice_title:"Itsas izotza", stat_ice_extent:"Artikoko izotzaren hedadura", stat_ice_anomaly:"Anomalia 1981–2010 batez bestekoarekiko",
+  card_ozone_title:"Ozono-geruza", stat_ozone_hole:"Ozono-zuloaren azalera", stat_ozone_status:"Egoera",
+  card_crime_title:"Ingurumen-delituak", stat_cases:"Salatutako kasuak (hiruhilekoa)", stat_top_type:"Mota ohikoena",
+  demo_note_title:"Datu hauei buruz",
+  demo_note_body:"Ikusten dituzun datuak erakunde bakoitzak argitaratutako erreferentzia-balioak dira, benetako kadentziarekin. Zuzeneko konexioak API-gakoak erregistratuta dituen backend proxy bat behar du; 2026an zehar faseka zabalduko da.",
+  footer_disclaimer:"Eco'clock Network ez dago aipatutako erakundeekin lotuta; haien datu publikoak esteka eta aipatzen ditu.",
+  footer_sources_title:"Datu-iturriak", footer_rights:"Eco'clock Network proiektua — eratzen ari den elkartea (2026).",
+  download_modal_title:"Eco'clock Beta", download_modal_body:"Betak oraindik ez du pakete publikorik. Botoi hau prest dago zure instalatzailea, TestFlight edo denda-fitxa argitaratu bezain laster estekatzeko.", download_modal_close:"Ulertuta",
+  unit_ha:"ha", unit_gt_co2:"Gt CO₂", unit_million_km2:"milioi km²", anomaly_label:"Anomalia",
+  badge_live:"LIVE", badge_ref:"ERREF", banner_offline:"Iturriekiko konexio partziala — baliteke zenbait datu eskuragarri ez egotea une honetan.",
+  val_deforestation_region:"Amazonasko arroa (Brasil)", val_coral_watch_region:"Barrera Handi Koralaztatua (Australia)",
+  val_coral_bleaching_level:"2. alerta (zaintza handitua)", val_ozone_status:"Pixkanakako berreskuratzea abian",
+  val_crime_top_type:"Basafaunaren trafikoa",
+  photo_credit_label:"Argazkiak", photo_credit_pd:"jabari publikoa",
+  donate_now:"Dohaindu orain", donate_modal_title:"Dohaintzak", donate_modal_body:"Dohaintza ekonomikoak ez daude aktibo oraingoz. Ezagutu proiektu hau babesteko beste modu batzuk."
+  ,footer_legal_note:"Elkartea erregistratu bitartean, Eco'clock Network proiektu pertsonal gisa dabil; ez du faktura edo dohaintza-ziurtagiri fiskalik igortzen."
+  ,donate_stripe:"Stripe (txartela) — laster"
+  ,donate_bizum:"Bizum (Espainia) — laster"
+  ,donate_swift:"Nazioarteko SWIFT transferentzia — laster"
+  ,donate_email:"Kontaktu zuzena"
+  ,sos_eyebrow:"Erantzun azkarra"
+  ,sos_subtitle:"Hondamendi bat gertatzen denean, ez dago denborarik datu egiaztatuen zain egoteko. Eco'clock-ek dohaintzak erantzun azkarreko erakundeetara bideratzen ditu, informazioa iristen jarraitzen duen bitartean."
+  ,sos_disclaimer_title:"Dohaindu aurretik, irakurri hau"
+  ,sos_disclaimer_body:"Atal honetako dohaintzak, unean uneko informazioaren arabera, hondamendi natural edo premiazko krisi humanitarioei erantzuten ari diren erakundeetara bideratzen dira. Aplikazioaren gainerako adierazle ambientalek —erregistro publikoetan oinarrituak eta konputazio banatuaren bidez egiaztatuak— ez bezala, hondamendi baten inguruko datuak urriak, aldakorrak eta denbora errealean egiaztatzeko zailak izan ohi dira. Egoera hauen presakotasunagatik, Eco'clock-ek ezin du bermatu jakinarazitako kalteen magnitudearen zehaztasuna, ez eta erakunde bakoitzak jasotako funtsei ematen dien azken erabilera ere. Kasu bakoitzari buruz dugun informazio guztia erakusteko konpromisoa hartzen dugu, jasotzen dugun bezala, baina dohaintza egiteko erabakia dohaintza-emaile bakoitzaren erantzukizun esklusiboa da, bere irizpidearen arabera."
+  ,sos_how_title:"Nola funtzionatzen duen"
+  ,sos_step1:"Krisi aktibo bakoitza uneko informazioarekin argitaratzen da aplikazioan (iturria, kalkulatutako norainokoa, jasotzen duen erakundea)."
+  ,sos_step2:"Aukeratutako erakundeari zuzenean dohaintzen diozu; Eco'clock-ek ez ditu funtsak erretenitzen edo kudeatzen."
+  ,sos_step3:"Krisiaren fitxa eguneratzen dugu informazio berri eta egiaztagarria iristen den heinean."
+  ,sos_cta:"Ikusi aplikazioan krisi aktiboak"
 }},
 en:{translation:{
   lang_label:"Language", theme_label:"View", theme_day:"Day", theme_dusk:"Dusk", theme_night:"Night", theme_auto:"Auto",
