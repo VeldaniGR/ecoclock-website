@@ -348,17 +348,17 @@ section{padding-block:64px}
   display:grid; grid-template-columns:1fr 1fr; gap:24px;
 }
 .grid-secondary{
-  display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px; margin-top:22px;
+  display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; margin-top:22px;
 }
-.grid-secondary .card{padding:16px; gap:10px; border-radius:var(--radius-md)}
-.grid-secondary .card-icon{width:34px; height:34px; border-radius:9px; font-size:1rem}
-.grid-secondary .card-source{font-size:.6rem}
-.grid-secondary .card h3{font-size:.98rem}
-.grid-secondary .stat-list{gap:8px}
-.grid-secondary .stat-row{padding-top:8px; gap:8px}
-.grid-secondary .stat-label{font-size:.7rem}
-.grid-secondary .stat-value{font-size:.82rem}
-.grid-secondary .card-foot{font-size:.6rem; padding-top:10px; gap:6px}
+.grid-secondary .card{padding:22px; gap:14px; border-radius:var(--radius-md)}
+.grid-secondary .card-icon{width:40px; height:40px; border-radius:10px; font-size:1.15rem}
+.grid-secondary .card-source{font-size:.65rem}
+.grid-secondary .card h3{font-size:1.08rem}
+.grid-secondary .stat-list{gap:12px}
+.grid-secondary .stat-row{flex-direction:column; align-items:flex-start; gap:2px; padding-top:10px}
+.grid-secondary .stat-value{font-size:.95rem; text-align:left; white-space:normal; word-break:break-word}
+.grid-secondary .stat-label{font-size:.72rem}
+.grid-secondary .card-foot{font-size:.65rem; padding-top:12px; gap:6px}
 .grid-secondary .trend-ind{font-size:.85em; margin-inline-start:6px; font-weight:700}
 .anomaly-badge{
   font-family:var(--font-mono); font-size:.55rem; letter-spacing:.06em; text-transform:uppercase;
@@ -483,12 +483,14 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
 @media (max-width:860px){
   .featured-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
+  .grid-secondary{grid-template-columns:repeat(2, 1fr)}
 }
 @media (max-width:640px){
   .brand-name{font-size:1rem}
   .controls{gap:6px}
   .select-wrap select{padding:7px 26px 7px 11px; font-size:.72rem}
   .source-list{grid-template-columns:1fr}
+  .grid-secondary{grid-template-columns:1fr}
 }
 
 /* =================== RTL (Arabic) =================== */
@@ -639,22 +641,22 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
           </div>
         </article>
 
-        <article class="card card-featured" data-card="coral">
+        <article class="card card-featured" data-card="posidonia">
           <div class="card-top">
-            <div class="card-icon" aria-hidden="true">🪸</div>
-            <a class="card-source" href="https://www.aims.gov.au" target="_blank" rel="noopener">AIMS ↗</a>
+            <div class="card-icon" aria-hidden="true">🌿</div>
+            <a class="card-source" href="https://atlasposidonia.com/es/que-es-la-posidonia/" target="_blank" rel="noopener">Atles de la Posidònia ↗</a>
           </div>
-          <h3 data-i18n="card_coral_title"></h3>
-          <p class="card-desc" data-i18n="card_coral_desc"></p>
+          <h3 data-i18n="card_posidonia_title"></h3>
+          <p class="card-desc" data-i18n="card_posidonia_desc"></p>
           <div class="stat-list">
-            <div class="stat-row"><span class="stat-label" data-i18n="stat_bleaching"></span><span class="stat-value" data-stat="coral.bleaching"></span></div>
-            <div class="stat-row"><span class="stat-label" data-i18n="stat_reef_stress"></span><span class="stat-value" data-stat="coral.reefStress"></span></div>
-            <div class="stat-row"><span class="stat-label" data-i18n="stat_watch_region"></span><span class="stat-value" data-stat="coral.watchRegion"></span></div>
+            <div class="stat-row"><span class="stat-label" data-i18n="stat_posidonia_surface"></span><span class="stat-value" data-stat="posidonia.surface"></span></div>
+            <div class="stat-row"><span class="stat-label" data-i18n="stat_posidonia_regression"></span><span class="stat-value" data-stat="posidonia.regression"></span></div>
+            <div class="stat-row"><span class="stat-label" data-i18n="stat_posidonia_region"></span><span class="stat-value" data-stat="posidonia.region"></span></div>
           </div>
           <div class="card-foot">
             <span class="badge badge-ref" data-i18n="badge_ref"></span>
-            <span><span data-i18n="last_updated"></span>: <span data-stat="coral.lastUpdated"></span></span>
-            <span><span data-i18n="next_update"></span>: <span class="countdown" data-countdown="coral">--:--:--</span> <span class="trend-ind" data-trend="coral" aria-hidden="true"></span><span class="anomaly-badge" data-anomaly="coral" hidden>!</span></span>
+            <span><span data-i18n="last_updated"></span>: <span data-stat="posidonia.lastUpdated"></span></span>
+            <span><span data-i18n="next_update"></span>: <span class="countdown" data-countdown="posidonia">--:--:--</span> <span class="trend-ind" data-trend="posidonia" aria-hidden="true"></span><span class="anomaly-badge" data-anomaly="posidonia" hidden>!</span></span>
           </div>
         </article>
       </div>
@@ -662,6 +664,23 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
 
     <h3 style="margin-top:52px; margin-bottom:0; font-size:1.15rem" data-i18n="secondary_title"></h3>
     <div class="grid-secondary">
+      <article class="card" data-card="coral">
+        <div class="card-top">
+          <div class="card-icon" aria-hidden="true">🪸</div>
+          <a class="card-source" href="https://www.aims.gov.au" target="_blank" rel="noopener">AIMS ↗</a>
+        </div>
+        <h3 data-i18n="card_coral_title"></h3>
+        <div class="stat-list">
+          <div class="stat-row"><span class="stat-label" data-i18n="stat_bleaching"></span><span class="stat-value" data-stat="coral.bleaching"></span></div>
+          <div class="stat-row"><span class="stat-label" data-i18n="stat_reef_stress"></span><span class="stat-value" data-stat="coral.reefStress"></span></div>
+        </div>
+        <div class="card-foot">
+          <span class="badge badge-ref" data-i18n="badge_ref"></span>
+          <span><span data-i18n="last_updated"></span>: <span data-stat="coral.lastUpdated"></span></span>
+          <span class="countdown" data-countdown="coral">--:--:--</span> <span class="trend-ind" data-trend="coral" aria-hidden="true"></span><span class="anomaly-badge" data-anomaly="coral" hidden>!</span>
+        </div>
+      </article>
+
       <article class="card" data-card="energy">
         <div class="card-top">
           <div class="card-icon" aria-hidden="true">⚡</div>
@@ -812,6 +831,8 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
       <span class="eyebrow" data-i18n="footer_sources_title"></span>
       <ul class="source-list">
         <li><a href="https://www.globalforestwatch.org" target="_blank" rel="noopener">Global Forest Watch (GFW)</a></li>
+        <li><a href="https://atlasposidonia.com/es/" target="_blank" rel="noopener">Atles de la Posidònia</a></li>
+        <li><a href="https://ideib.caib.es/posidonia/" target="_blank" rel="noopener">IDEIB — Cartografia Posidonia</a></li>
         <li><a href="https://www.aims.gov.au" target="_blank" rel="noopener">AIMS</a></li>
         <li><a href="https://www.eia.gov" target="_blank" rel="noopener">EIA</a></li>
         <li><a href="https://www.fao.org/faostat" target="_blank" rel="noopener">FAOSTAT</a></li>
@@ -918,13 +939,16 @@ ca:{translation:{
   hero_subtitle:"Cada segon, Eco'clock reuneix els registres públics de boscos, esculls, gel, aigua, energia i delictes ambientals en un únic tauler. Mira. Comparteix. Actua.",
   badge_beta:"BETA", download_beta:"Descarregar Beta", hero_scroll_cta:"Veure l'estat del planeta", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Estat actual", status_title:"Dos senyals que més preocupen",
-  status_subtitle:"La desforestació i el blanqueig de corall concentren el major risc de pèrdua irreversible. La resta d'indicadors completa el panorama.",
+  status_subtitle:"La desforestació i el retrocés de les praderies de posidònia concentren el major risc de pèrdua irreversible. La resta d'indicadors completa el panorama.",
   manual_refresh:"Actualitzar ara",
   card_deforestation_title:"Desforestació", card_deforestation_desc:"Alertes de pèrdua de cobertura arbòria detectades per satèl·lit.",
   stat_area_lost:"Superfície perduda (24 h, estimat)", stat_alerts:"Alertes GLAD actives", stat_top_region:"Regió amb més alertes",
   status_demo:"Demo", last_updated:"Actualitzat", next_update:"Propera actualització",
   card_coral_title:"Esculls de corall", card_coral_desc:"Estrès tèrmic i blanqueig als esculls monitorats.",
   stat_bleaching:"Nivell de blanqueig", stat_reef_stress:"Esculls sota estrès tèrmic", stat_watch_region:"Regió en vigilància",
+  card_posidonia_title:"Posidonia oceànica", card_posidonia_desc:"Superfície de praderies marines de Posidonia oceanica, planta endèmica del Mediterrani, cartografiada per organismes oficials.",
+  stat_posidonia_surface:"Superfície cartografiada (Illes Balears)", stat_posidonia_regression:"Retrocés històric (Mediterrani, 50 anys)", stat_posidonia_region:"Regió de referència",
+  val_posidonia_regression:"~34% (Telesca et al., 2015)", val_posidonia_region:"Illes Balears (Espanya)",
   secondary_title:"La resta de la xarxa",
   card_energy_title:"Energia", stat_co2:"Emissions de CO₂ (energia, anual)", stat_renewables:"Participació renovable",
   card_water_title:"Aigua i agricultura", stat_water_stress:"Índex d'estrès hídric", stat_withdrawal:"Ús agrícola sobre el total d'aigua dolça",
@@ -966,13 +990,16 @@ es:{translation:{
   hero_subtitle:"Cada segundo, Eco'clock reúne los registros públicos de bosques, arrecifes, hielo, agua, energía y delitos ambientales en un único tablero. Mira. Comparte. Actúa.",
   badge_beta:"BETA", download_beta:"Descargar Beta", hero_scroll_cta:"Ver el estado del planeta", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Estado actual", status_title:"Dos señales que más preocupan",
-  status_subtitle:"La deforestación y el blanqueamiento de coral concentran el mayor riesgo de pérdida irreversible. El resto de indicadores completa el panorama.",
+  status_subtitle:"La deforestación y la regresión de las praderas de posidonia concentran el mayor riesgo de pérdida irreversible. El resto de indicadores completa el panorama.",
   manual_refresh:"Actualizar ahora",
   card_deforestation_title:"Deforestación", card_deforestation_desc:"Alertas de pérdida de cobertura arbórea detectadas por satélite.",
   stat_area_lost:"Superficie perdida (24 h, estimado)", stat_alerts:"Alertas GLAD activas", stat_top_region:"Región con más alertas",
   status_demo:"Demo", last_updated:"Actualizado", next_update:"Próxima actualización",
   card_coral_title:"Arrecifes de coral", card_coral_desc:"Estrés térmico y blanqueamiento en los arrecifes monitoreados.",
   stat_bleaching:"Nivel de blanqueamiento", stat_reef_stress:"Arrecifes bajo estrés térmico", stat_watch_region:"Región en vigilancia",
+  card_posidonia_title:"Posidonia oceánica", card_posidonia_desc:"Superficie de praderas marinas de Posidonia oceanica, planta endémica del Mediterráneo, cartografiada por organismos oficiales.",
+  stat_posidonia_surface:"Superficie cartografiada (Illes Balears)", stat_posidonia_regression:"Retroceso histórico (Mediterráneo, 50 años)", stat_posidonia_region:"Región de referencia",
+  val_posidonia_regression:"~34% (Telesca et al., 2015)", val_posidonia_region:"Illes Balears (España)",
   secondary_title:"El resto de la red",
   card_energy_title:"Energía", stat_co2:"Emisiones de CO₂ (energía, anual)", stat_renewables:"Participación renovable",
   card_water_title:"Agua y agricultura", stat_water_stress:"Índice de estrés hídrico", stat_withdrawal:"Uso agrícola sobre el total de agua dulce",
@@ -1014,13 +1041,16 @@ eu:{translation:{
   hero_subtitle:"Segundoro, Eco'clock-ek basoen, itsas arrezifeen, izotzaren, uraren, energiaren eta ingurumen-delituen erregistro publikoak biltzen ditu panel bakar batean. Begiratu. Partekatu. Ekin.",
   badge_beta:"BETA", download_beta:"Beta deskargatu", hero_scroll_cta:"Ikusi planetaren egoera", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Egungo egoera", status_title:"Kezka handiena sortzen duten bi seinaleak",
-  status_subtitle:"Baso-soiltzeak eta koralen zuritzeak dute galera itzulezinaren arriskurik handiena. Gainerako adierazleek panorama osatzen dute.",
+  status_subtitle:"Baso-soiltzeak eta posidonia belar-larreen atzerakadak dute galera itzulezinaren arriskurik handiena. Gainerako adierazleek panorama osatzen dute.",
   manual_refresh:"Eguneratu orain",
   card_deforestation_title:"Baso-soiltzea", card_deforestation_desc:"Satelite bidez hautemandako zuhaitz-estalduraren galera-alertak.",
   stat_area_lost:"Galdutako azalera (24 h, kalkulatua)", stat_alerts:"GLAD alerta aktiboak", stat_top_region:"Alerta gehien dituen eskualdea",
   status_demo:"Demoa", last_updated:"Eguneratuta", next_update:"Hurrengo eguneratzea",
   card_coral_title:"Itsas arrezifeak", card_coral_desc:"Estres termikoa eta zuritzea kontrolatutako arrezifeetan.",
   stat_bleaching:"Zuritze-maila", stat_reef_stress:"Estres termikopean dauden arrezifeak", stat_watch_region:"Zaintzapeko eskualdea",
+  card_posidonia_title:"Posidonia oceanica", card_posidonia_desc:"Mediterraneoko landare endemikoa den Posidonia oceanicaren belar-larre itsastarren azalera, erakunde ofizialek kartografiatua.",
+  stat_posidonia_surface:"Kartografiatutako azalera (Balear Uharteak)", stat_posidonia_regression:"Atzerakada historikoa (Mediterraneoa, 50 urte)", stat_posidonia_region:"Erreferentziazko eskualdea",
+  val_posidonia_regression:"~%34 (Telesca et al., 2015)", val_posidonia_region:"Balear Uharteak (Espainia)",
   secondary_title:"Sarearen gainerakoa",
   card_energy_title:"Energia", stat_co2:"CO₂ isuriak (energia, urtekoa)", stat_renewables:"Energia berriztagarrien parte-hartzea",
   card_water_title:"Ura eta nekazaritza", stat_water_stress:"Ur-estresaren indizea", stat_withdrawal:"Nekazaritza-erabilera ur gezaren guztizkoarekiko",
@@ -1062,13 +1092,16 @@ en:{translation:{
   hero_subtitle:"Every second, Eco'clock brings together public records on forests, reefs, ice, water, energy and environmental crime in a single dashboard. Watch. Share. Act.",
   badge_beta:"BETA", download_beta:"Download Beta", hero_scroll_cta:"See the planet's status", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Current status", status_title:"Two signals we watch closest",
-  status_subtitle:"Deforestation and coral bleaching carry the highest risk of irreversible loss. The other indicators fill out the picture.",
+  status_subtitle:"Deforestation and the regression of Posidonia seagrass meadows carry the highest risk of irreversible loss. The other indicators fill out the picture.",
   manual_refresh:"Refresh now",
   card_deforestation_title:"Deforestation", card_deforestation_desc:"Satellite-detected tree cover loss alerts.",
   stat_area_lost:"Area lost (24 h, estimated)", stat_alerts:"Active GLAD alerts", stat_top_region:"Region with most alerts",
   status_demo:"Demo", last_updated:"Updated", next_update:"Next update",
   card_coral_title:"Coral reefs", card_coral_desc:"Heat stress and bleaching across monitored reefs.",
   stat_bleaching:"Bleaching level", stat_reef_stress:"Reefs under heat stress", stat_watch_region:"Region under watch",
+  card_posidonia_title:"Posidonia seagrass", card_posidonia_desc:"Mapped extent of Posidonia oceanica meadows, an endemic Mediterranean seagrass, surveyed by official cartography agencies.",
+  stat_posidonia_surface:"Mapped surface area (Balearic Islands)", stat_posidonia_regression:"Historical regression (Mediterranean, 50 years)", stat_posidonia_region:"Reference region",
+  val_posidonia_regression:"~34% (Telesca et al., 2015)", val_posidonia_region:"Balearic Islands (Spain)",
   secondary_title:"The rest of the network",
   card_energy_title:"Energy", stat_co2:"CO₂ emissions (energy, annual)", stat_renewables:"Renewable share",
   card_water_title:"Water & agriculture", stat_water_stress:"Water stress index", stat_withdrawal:"Agricultural share of freshwater use",
@@ -1110,13 +1143,16 @@ fr:{translation:{
   hero_subtitle:"Chaque seconde, Eco'clock réunit les registres publics sur les forêts, les récifs, la glace, l'eau, l'énergie et la criminalité environnementale dans un seul tableau de bord. Regardez. Partagez. Agissez.",
   badge_beta:"BÊTA", download_beta:"Télécharger la bêta", hero_scroll_cta:"Voir l'état de la planète", hero_sos_cta:"S.O.S.",
   status_eyebrow:"État actuel", status_title:"Deux signaux à surveiller de près",
-  status_subtitle:"La déforestation et le blanchissement des coraux concentrent le plus grand risque de perte irréversible. Les autres indicateurs complètent le tableau.",
+  status_subtitle:"La déforestation et la régression des herbiers de posidonie concentrent le plus grand risque de perte irréversible. Les autres indicateurs complètent le tableau.",
   manual_refresh:"Actualiser",
   card_deforestation_title:"Déforestation", card_deforestation_desc:"Alertes de perte de couvert arboré détectées par satellite.",
   stat_area_lost:"Surface perdue (24 h, estimation)", stat_alerts:"Alertes GLAD actives", stat_top_region:"Région la plus alertée",
   status_demo:"Démo", last_updated:"Mis à jour", next_update:"Prochaine mise à jour",
   card_coral_title:"Récifs coralliens", card_coral_desc:"Stress thermique et blanchissement sur les récifs surveillés.",
   stat_bleaching:"Niveau de blanchissement", stat_reef_stress:"Récifs sous stress thermique", stat_watch_region:"Région sous surveillance",
+  card_posidonia_title:"Posidonie océanique", card_posidonia_desc:"Superficie cartographiée des herbiers de Posidonia oceanica, plante endémique de la Méditerranée, relevée par les organismes officiels.",
+  stat_posidonia_surface:"Superficie cartographiée (îles Baléares)", stat_posidonia_regression:"Régression historique (Méditerranée, 50 ans)", stat_posidonia_region:"Région de référence",
+  val_posidonia_regression:"~34 % (Telesca et al., 2015)", val_posidonia_region:"Îles Baléares (Espagne)",
   secondary_title:"Le reste du réseau",
   card_energy_title:"Énergie", stat_co2:"Émissions de CO₂ (énergie, annuel)", stat_renewables:"Part des renouvelables",
   card_water_title:"Eau et agriculture", stat_water_stress:"Indice de stress hydrique", stat_withdrawal:"Part agricole des prélèvements d'eau douce",
@@ -1158,13 +1194,16 @@ de:{translation:{
   hero_subtitle:"Jede Sekunde bündelt Eco'clock öffentliche Daten zu Wäldern, Riffen, Eis, Wasser, Energie und Umweltkriminalität in einem einzigen Dashboard. Beobachten. Teilen. Handeln.",
   badge_beta:"BETA", download_beta:"Beta herunterladen", hero_scroll_cta:"Zustand des Planeten ansehen", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Aktueller Stand", status_title:"Zwei Signale, die uns am meisten beunruhigen",
-  status_subtitle:"Entwaldung und Korallenbleiche bergen das größte Risiko irreversibler Verluste. Die übrigen Indikatoren vervollständigen das Bild.",
+  status_subtitle:"Entwaldung und der Rückgang der Posidonia-Wiesen bergen das größte Risiko irreversibler Verluste. Die übrigen Indikatoren vervollständigen das Bild.",
   manual_refresh:"Jetzt aktualisieren",
   card_deforestation_title:"Entwaldung", card_deforestation_desc:"Satellitengestützte Warnungen zum Verlust der Baumbedeckung.",
   stat_area_lost:"Verlorene Fläche (24 Std., geschätzt)", stat_alerts:"Aktive GLAD-Warnungen", stat_top_region:"Region mit den meisten Warnungen",
   status_demo:"Demo", last_updated:"Aktualisiert", next_update:"Nächste Aktualisierung",
   card_coral_title:"Korallenriffe", card_coral_desc:"Hitzestress und Bleiche in den überwachten Riffen.",
   stat_bleaching:"Bleichgrad", stat_reef_stress:"Riffe unter Hitzestress", stat_watch_region:"Beobachtete Region",
+  card_posidonia_title:"Neptungras (Posidonia)", card_posidonia_desc:"Kartierte Fläche der Posidonia-oceanica-Wiesen, einer im Mittelmeer endemischen Seegrasart, erfasst von offiziellen Kartierungsstellen.",
+  stat_posidonia_surface:"Kartierte Fläche (Balearen)", stat_posidonia_regression:"Historischer Rückgang (Mittelmeer, 50 Jahre)", stat_posidonia_region:"Referenzregion",
+  val_posidonia_regression:"~34 % (Telesca et al., 2015)", val_posidonia_region:"Balearen (Spanien)",
   secondary_title:"Der Rest des Netzwerks",
   card_energy_title:"Energie", stat_co2:"CO₂-Emissionen (Energie, jährlich)", stat_renewables:"Anteil erneuerbarer Energien",
   card_water_title:"Wasser & Landwirtschaft", stat_water_stress:"Wasserstress-Index", stat_withdrawal:"Landwirtschaftlicher Anteil an der Süßwassernutzung",
@@ -1206,13 +1245,16 @@ it:{translation:{
   hero_subtitle:"Ogni secondo, Eco'clock riunisce i registri pubblici su foreste, barriere coralline, ghiaccio, acqua, energia e reati ambientali in un'unica dashboard. Guarda. Condividi. Agisci.",
   badge_beta:"BETA", download_beta:"Scarica la Beta", hero_scroll_cta:"Guarda lo stato del pianeta", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Stato attuale", status_title:"Due segnali che ci preoccupano di più",
-  status_subtitle:"La deforestazione e lo sbiancamento dei coralli concentrano il rischio più alto di perdita irreversibile. Gli altri indicatori completano il quadro.",
+  status_subtitle:"La deforestazione e la regressione delle praterie di posidonia concentrano il rischio più alto di perdita irreversibile. Gli altri indicatori completano il quadro.",
   manual_refresh:"Aggiorna ora",
   card_deforestation_title:"Deforestazione", card_deforestation_desc:"Allarmi di perdita di copertura arborea rilevati via satellite.",
   stat_area_lost:"Superficie persa (24 h, stima)", stat_alerts:"Allarmi GLAD attivi", stat_top_region:"Regione con più allarmi",
   status_demo:"Demo", last_updated:"Aggiornato", next_update:"Prossimo aggiornamento",
   card_coral_title:"Barriere coralline", card_coral_desc:"Stress termico e sbiancamento nelle barriere monitorate.",
   stat_bleaching:"Livello di sbiancamento", stat_reef_stress:"Barriere sotto stress termico", stat_watch_region:"Regione sotto osservazione",
+  card_posidonia_title:"Posidonia oceanica", card_posidonia_desc:"Superficie cartografata delle praterie di Posidonia oceanica, pianta endemica del Mediterraneo, rilevata dagli enti ufficiali.",
+  stat_posidonia_surface:"Superficie cartografata (Isole Baleari)", stat_posidonia_regression:"Regressione storica (Mediterraneo, 50 anni)", stat_posidonia_region:"Regione di riferimento",
+  val_posidonia_regression:"~34% (Telesca et al., 2015)", val_posidonia_region:"Isole Baleari (Spagna)",
   secondary_title:"Il resto della rete",
   card_energy_title:"Energia", stat_co2:"Emissioni di CO₂ (energia, annuali)", stat_renewables:"Quota rinnovabile",
   card_water_title:"Acqua e agricoltura", stat_water_stress:"Indice di stress idrico", stat_withdrawal:"Quota agricola sul prelievo di acqua dolce",
@@ -1254,13 +1296,16 @@ pt:{translation:{
   hero_subtitle:"A cada segundo, o Eco'clock reúne registros públicos de florestas, recifes, gelo, água, energia e crimes ambientais em um único painel. Veja. Compartilhe. Aja.",
   badge_beta:"BETA", download_beta:"Baixar Beta", hero_scroll_cta:"Ver o estado do planeta", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Estado atual", status_title:"Dois sinais que mais preocupam",
-  status_subtitle:"O desmatamento e o branqueamento de corais concentram o maior risco de perda irreversível. Os demais indicadores completam o panorama.",
+  status_subtitle:"O desmatamento e a regressão dos prados de posidónia concentram o maior risco de perda irreversível. Os demais indicadores completam o panorama.",
   manual_refresh:"Atualizar agora",
   card_deforestation_title:"Desmatamento", card_deforestation_desc:"Alertas de perda de cobertura arbórea detectados por satélite.",
   stat_area_lost:"Área perdida (24 h, estimado)", stat_alerts:"Alertas GLAD ativos", stat_top_region:"Região com mais alertas",
   status_demo:"Demo", last_updated:"Atualizado", next_update:"Próxima atualização",
   card_coral_title:"Recifes de coral", card_coral_desc:"Estresse térmico e branqueamento nos recifes monitorados.",
   stat_bleaching:"Nível de branqueamento", stat_reef_stress:"Recifes sob estresse térmico", stat_watch_region:"Região sob observação",
+  card_posidonia_title:"Posidonia oceânica", card_posidonia_desc:"Superfície cartografada dos prados de Posidonia oceanica, planta endémica do Mediterrâneo, levantada por organismos oficiais.",
+  stat_posidonia_surface:"Superfície cartografada (Ilhas Baleares)", stat_posidonia_regression:"Regressão histórica (Mediterrâneo, 50 anos)", stat_posidonia_region:"Região de referência",
+  val_posidonia_regression:"~34% (Telesca et al., 2015)", val_posidonia_region:"Ilhas Baleares (Espanha)",
   secondary_title:"O resto da rede",
   card_energy_title:"Energia", stat_co2:"Emissões de CO₂ (energia, anual)", stat_renewables:"Participação renovável",
   card_water_title:"Água e agricultura", stat_water_stress:"Índice de estresse hídrico", stat_withdrawal:"Parcela agrícola no uso de água doce",
@@ -1302,13 +1347,16 @@ zh:{translation:{
   hero_subtitle:"Eco'clock 每一秒都在汇集森林、珊瑚礁、冰层、水资源、能源和环境犯罪的公开数据，呈现在一个仪表盘中。查看。分享。行动。",
   badge_beta:"测试版", download_beta:"下载测试版", hero_scroll_cta:"查看地球现状", hero_sos_cta:"S.O.S.",
   status_eyebrow:"当前状态", status_title:"最值得关注的两个信号",
-  status_subtitle:"森林砍伐和珊瑚白化带来的不可逆损失风险最高，其余指标则补全了全貌。",
+  status_subtitle:"森林砍伐和波喜荡草草甸的退化带来的不可逆损失风险最高，其余指标则补全了全貌。",
   manual_refresh:"立即刷新",
   card_deforestation_title:"森林砍伐", card_deforestation_desc:"卫星监测到的树木覆盖损失警报。",
   stat_area_lost:"损失面积（24 小时，估算）", stat_alerts:"活跃 GLAD 警报数", stat_top_region:"警报最多的地区",
   status_demo:"演示", last_updated:"更新时间", next_update:"下次更新",
   card_coral_title:"珊瑚礁", card_coral_desc:"受监测珊瑚礁的热应激与白化情况。",
   stat_bleaching:"白化程度", stat_reef_stress:"受热应激的珊瑚礁比例", stat_watch_region:"重点监测地区",
+  card_posidonia_title:"海洋波喜荡草（Posidonia）", card_posidonia_desc:"地中海特有海草 Posidonia oceanica 草甸的官方测绘面积。",
+  stat_posidonia_surface:"已测绘面积（巴利阿里群岛）", stat_posidonia_regression:"历史退化率（地中海，50年）", stat_posidonia_region:"参考区域",
+  val_posidonia_regression:"约34%（Telesca 等，2015）", val_posidonia_region:"巴利阿里群岛（西班牙）",
   secondary_title:"网络的其余部分",
   card_energy_title:"能源", stat_co2:"CO₂ 排放量（能源，年度）", stat_renewables:"可再生能源占比",
   card_water_title:"水资源与农业", stat_water_stress:"水资源压力指数", stat_withdrawal:"农业用水占淡水总用量比例",
@@ -1350,13 +1398,16 @@ ja:{translation:{
   hero_subtitle:"Eco'clockは、毎秒、森林・サンゴ礁・氷・水・エネルギー・環境犯罪に関する公開データをひとつのダッシュボードに集約します。見る。共有する。行動する。",
   badge_beta:"ベータ", download_beta:"ベータ版をダウンロード", hero_scroll_cta:"地球の現状を見る", hero_sos_cta:"S.O.S.",
   status_eyebrow:"現在の状況", status_title:"特に注視すべき2つの兆候",
-  status_subtitle:"森林伐採とサンゴの白化は、不可逆的な損失のリスクが最も高い指標です。その他の指標が全体像を補います。",
+  status_subtitle:"森林伐採とポシドニア群落の減少は、不可逆的な損失のリスクが最も高い指標です。その他の指標が全体像を補います。",
   manual_refresh:"今すぐ更新",
   card_deforestation_title:"森林伐採", card_deforestation_desc:"衛星が検知した樹木被覆の減少アラート。",
   stat_area_lost:"喪失面積（24時間、推定）", stat_alerts:"有効なGLADアラート数", stat_top_region:"アラートが最も多い地域",
   status_demo:"デモ", last_updated:"更新日時", next_update:"次回更新",
   card_coral_title:"サンゴ礁", card_coral_desc:"監視対象のサンゴ礁における熱ストレスと白化の状況。",
   stat_bleaching:"白化レベル", stat_reef_stress:"熱ストレス下のサンゴ礁の割合", stat_watch_region:"注視地域",
+  card_posidonia_title:"ポシドニア（海草）", card_posidonia_desc:"地中海固有の海草ポシドニア・オセアニカの群落について、公的機関が測量した分布面積。",
+  stat_posidonia_surface:"測量済み面積（バレアレス諸島）", stat_posidonia_regression:"過去の減少率（地中海、50年間）", stat_posidonia_region:"基準地域",
+  val_posidonia_regression:"約34%（Telesca et al., 2015）", val_posidonia_region:"バレアレス諸島（スペイン）",
   secondary_title:"ネットワークのその他の指標",
   card_energy_title:"エネルギー", stat_co2:"CO₂排出量（エネルギー、年間）", stat_renewables:"再生可能エネルギーの割合",
   card_water_title:"水と農業", stat_water_stress:"水ストレス指数", stat_withdrawal:"淡水利用に占める農業用水の割合",
@@ -1398,13 +1449,16 @@ ru:{translation:{
   hero_subtitle:"Каждую секунду Eco'clock объединяет открытые данные о лесах, рифах, льдах, воде, энергетике и экологических преступлениях на одной панели. Смотрите. Делитесь. Действуйте.",
   badge_beta:"БЕТА", download_beta:"Скачать бету", hero_scroll_cta:"Смотреть состояние планеты", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Текущее состояние", status_title:"Два сигнала, которые тревожат больше всего",
-  status_subtitle:"Вырубка лесов и обесцвечивание кораллов несут наибольший риск необратимых потерь. Остальные показатели дополняют картину.",
+  status_subtitle:"Вырубка лесов и сокращение лугов посидонии несут наибольший риск необратимых потерь. Остальные показатели дополняют картину.",
   manual_refresh:"Обновить сейчас",
   card_deforestation_title:"Вырубка лесов", card_deforestation_desc:"Спутниковые оповещения о потере древесного покрова.",
   stat_area_lost:"Утраченная площадь (24 ч, оценка)", stat_alerts:"Активные оповещения GLAD", stat_top_region:"Регион с наибольшим числом оповещений",
   status_demo:"Демо", last_updated:"Обновлено", next_update:"Следующее обновление",
   card_coral_title:"Коралловые рифы", card_coral_desc:"Тепловой стресс и обесцвечивание на наблюдаемых рифах.",
   stat_bleaching:"Уровень обесцвечивания", stat_reef_stress:"Рифы в состоянии теплового стресса", stat_watch_region:"Регион под наблюдением",
+  card_posidonia_title:"Посидония океаническая", card_posidonia_desc:"Картографированная площадь лугов Posidonia oceanica — эндемичного средиземноморского морского растения, по данным официальных ведомств.",
+  stat_posidonia_surface:"Картографированная площадь (Балеарские острова)", stat_posidonia_regression:"Историческое сокращение (Средиземноморье, 50 лет)", stat_posidonia_region:"Регион сравнения",
+  val_posidonia_regression:"~34% (Telesca и др., 2015)", val_posidonia_region:"Балеарские острова (Испания)",
   secondary_title:"Остальная часть сети",
   card_energy_title:"Энергетика", stat_co2:"Выбросы CO₂ (энергетика, за год)", stat_renewables:"Доля возобновляемых источников",
   card_water_title:"Вода и сельское хозяйство", stat_water_stress:"Индекс водного стресса", stat_withdrawal:"Доля сельского хозяйства в заборе пресной воды",
@@ -1446,13 +1500,16 @@ ar:{translation:{
   hero_subtitle:"في كل ثانية، يجمع Eco'clock سجلات عامة عن الغابات والشعاب المرجانية والجليد والمياه والطاقة والجرائم البيئية في لوحة واحدة. شاهد. شارك. تحرّك.",
   badge_beta:"تجريبي", download_beta:"تنزيل النسخة التجريبية", hero_scroll_cta:"عرض حالة الكوكب", hero_sos_cta:"S.O.S.",
   status_eyebrow:"الحالة الراهنة", status_title:"إشارتان تستحقان أكبر قدر من الاهتمام",
-  status_subtitle:"تركّز إزالة الغابات وابيضاض المرجان أكبر قدر من مخاطر الفقدان الذي لا يمكن تداركه، بينما تكمل بقية المؤشرات الصورة العامة.",
+  status_subtitle:"تركّز إزالة الغابات وتراجع مروج البوسيدونيا أكبر قدر من مخاطر الفقدان الذي لا يمكن تداركه، بينما تكمل بقية المؤشرات الصورة العامة.",
   manual_refresh:"تحديث الآن",
   card_deforestation_title:"إزالة الغابات", card_deforestation_desc:"تنبيهات بفقدان الغطاء الشجري تُرصد عبر الأقمار الصناعية.",
   stat_area_lost:"المساحة المفقودة (24 ساعة، تقديري)", stat_alerts:"تنبيهات GLAD النشطة", stat_top_region:"المنطقة الأكثر تنبيهًا",
   status_demo:"تجريبي", last_updated:"آخر تحديث", next_update:"التحديث القادم",
   card_coral_title:"الشعاب المرجانية", card_coral_desc:"الإجهاد الحراري وابيضاض المرجان في الشعاب المراقَبة.",
   stat_bleaching:"مستوى الابيضاض", stat_reef_stress:"الشعاب الواقعة تحت إجهاد حراري", stat_watch_region:"المنطقة قيد المراقبة",
+  card_posidonia_title:"عشب البوسيدونيا البحري", card_posidonia_desc:"المساحة المرصودة لمروج نبات Posidonia oceanica، وهو نبات بحري متوطن في البحر المتوسط، وفق الهيئات الرسمية.",
+  stat_posidonia_surface:"المساحة المرصودة (جزر البليار)", stat_posidonia_regression:"التراجع التاريخي (البحر المتوسط، 50 عامًا)", stat_posidonia_region:"المنطقة المرجعية",
+  val_posidonia_regression:"~34٪ (Telesca et al., 2015)", val_posidonia_region:"جزر البليار (إسبانيا)",
   secondary_title:"بقية الشبكة",
   card_energy_title:"الطاقة", stat_co2:"انبعاثات ثاني أكسيد الكربون (الطاقة، سنويًا)", stat_renewables:"حصة الطاقة المتجددة",
   card_water_title:"المياه والزراعة", stat_water_stress:"مؤشر إجهاد المياه", stat_withdrawal:"حصة الزراعة من استخدام المياه العذبة",
@@ -1493,6 +1550,7 @@ ar:{translation:{
    (through your own backend proxy) to go from demo to live. */
 const DATA_BASE = {
   deforestation: { areaLost: 6140, alerts: 18420, intervalHours: 6, jitter: 0.05 },
+  posidonia:     { surface: 55368, intervalHours: 168, jitter: 0.004 },
   coral:         { reefStress: 34, intervalHours: 7, jitter: 0.06 },
   energy:        { co2: 36.8, renewables: 30.9, intervalHours: 9, jitter: 0.02 },
   water:         { stress: 18.6, withdrawal: 70, intervalHours: 10, jitter: 0.03 },
@@ -1552,7 +1610,7 @@ function saveSchedule(id, sched){
 
 const liveValues = {};
 
-function computeCardValues(id, prev){
+function computeCardValues(id, prev, manual){
   const base = DATA_BASE[id];
   const trend = loadTrend(id);
   const v = {};
@@ -1560,16 +1618,26 @@ function computeCardValues(id, prev){
     const delta = n * trend.strength * (trend.dir === 'up' ? 1 : -1);
     return Math.max(0, n + delta);
   };
-  // anomaly ~1 every 20 updates
-  updateCounts[id] = (updateCounts[id] || 0) + 1;
-  const isAnomaly = (updateCounts[id] % 20 === 0) || (Math.random() < 0.05 && updateCounts[id] > 3);
-  const anomalyFactor = isAnomaly ? (1.15 + Math.random()*0.25) * (Math.random() < 0.5 ? 1 : -1) : 0;
+  // anomaly ~1 every 20 *scheduled* updates. Manual "refresh now" clicks
+  // re-poll the same reference source ahead of schedule, so they must not
+  // feed this counter — otherwise mashing the button converges every id
+  // onto the same click count and fires every anomaly badge at once.
+  let isAnomaly = false, anomalyFactor = 0;
+  if(!manual){
+    updateCounts[id] = (updateCounts[id] || 0) + 1;
+    isAnomaly = (updateCounts[id] % 20 === 0) || (Math.random() < 0.05 && updateCounts[id] > 3);
+    anomalyFactor = isAnomaly ? (1.15 + Math.random()*0.25) * (Math.random() < 0.5 ? 1 : -1) : 0;
+  }
 
   switch(id){
     case 'deforestation':
       v.areaLost = applyTrend(jitterVal(base.areaLost, base.jitter));
       v.alerts = applyTrend(jitterVal(base.alerts, base.jitter));
       if(isAnomaly){ v.areaLost *= (1 + Math.abs(anomalyFactor)*0.4); v.alerts *= (1 + Math.abs(anomalyFactor)*0.5); }
+      break;
+    case 'posidonia':
+      v.surface = applyTrend(jitterVal(base.surface, base.jitter));
+      if(isAnomaly) v.surface = Math.max(0, v.surface * (1 - Math.abs(anomalyFactor)*0.03));
       break;
     case 'coral':
       v.reefStress = applyTrend(jitterVal(base.reefStress, base.jitter));
@@ -1619,6 +1687,11 @@ function renderCard(id){
       setStat('areaLost', fmtInt(v.areaLost, locale) + ' ' + unitHa);
       setStat('alerts', fmtInt(v.alerts, locale));
       break;
+    case 'posidonia':
+      setStat('surface', fmtInt(v.surface, locale) + ' ' + unitHa);
+      setStat('regression', i18next.t('val_posidonia_regression'));
+      setStat('region', i18next.t('val_posidonia_region'));
+      break;
     case 'coral':
       setStat('reefStress', fmtDec(v.reefStress, locale, 0) + '%');
       break;
@@ -1665,7 +1738,7 @@ function renderAllCards(){
 }
 
 function refreshCard(id, manual){
-  liveValues[id] = computeCardValues(id, liveValues[id]);
+  liveValues[id] = computeCardValues(id, liveValues[id], manual);
   const now = Date.now();
   const sched = { last: now, next: now + DATA_BASE[id].intervalHours*3600*1000 };
   saveSchedule(id, sched);
@@ -1673,10 +1746,22 @@ function refreshCard(id, manual){
   scheduleNext(id);
 }
 
+// setTimeout uses a 32-bit signed int internally: any delay above ~24.8
+// days (2^31-1 ms) overflows and fires almost immediately instead of
+// waiting, which then reschedules and overflows again — an infinite
+// rapid-fire loop. Cap every timer well under that limit; if the real
+// target is further away, just re-check periodically instead of trying
+// to wait for it in one single setTimeout.
+const MAX_TIMEOUT_MS = 20 * 24 * 3600 * 1000; // 20 days
 function scheduleNext(id){
   if(scheduleTimers[id]) clearTimeout(scheduleTimers[id]);
   const sched = loadSchedule(id, DATA_BASE[id].intervalHours);
-  const delay = Math.max(1000, sched.next - Date.now());
+  const rawDelay = sched.next - Date.now();
+  if(rawDelay > MAX_TIMEOUT_MS){
+    scheduleTimers[id] = setTimeout(()=> scheduleNext(id), MAX_TIMEOUT_MS);
+    return;
+  }
+  const delay = Math.max(1000, rawDelay);
   scheduleTimers[id] = setTimeout(()=> refreshCard(id), delay);
 }
 
@@ -1687,10 +1772,17 @@ function tickCountdowns(){
     const sched = safeLS('ecoclock_sched_'+id, null);
     if(!sched) return;
     let remaining = Math.max(0, sched.next - now);
-    const h = String(Math.floor(remaining/3600000)).padStart(2,'0');
+    const totalHours = Math.floor(remaining/3600000);
     const m = String(Math.floor((remaining%3600000)/60000)).padStart(2,'0');
     const s = String(Math.floor((remaining%60000)/1000)).padStart(2,'0');
-    el.textContent = h+':'+m+':'+s;
+    if(totalHours >= 24){
+      const days = Math.floor(totalHours/24);
+      const h = String(totalHours%24).padStart(2,'0');
+      el.textContent = days + 'd ' + h+':'+m+':'+s;
+    } else {
+      const h = String(totalHours).padStart(2,'0');
+      el.textContent = h+':'+m+':'+s;
+    }
   });
 }
 
@@ -1903,11 +1995,13 @@ function bindUI(){
     if(e.key === 'Escape'){ closeModal(); closeDonateModal(); }
   });
 
-  document.getElementById('refreshAllBtn').addEventListener('click', function(){                                                                                                                                    
-    this.classList.add('spinning');                                                                                                                                                                               
-     Object.keys(DATA_BASE).forEach(id => refreshCard(id, true));                                                                                                                                                  
-     fetchAllLive();                                                                                                                                                                                               
-     setTimeout(()=> this.classList.remove('spinning'), 800);                                                                                                                                                      
+  document.getElementById('refreshAllBtn').addEventListener('click', function(){
+    if(this.disabled) return;
+    this.disabled = true;
+    this.classList.add('spinning');
+    Object.keys(DATA_BASE).forEach(id => refreshCard(id, true));
+    fetchAllLive();
+    setTimeout(()=> { this.classList.remove('spinning'); this.disabled = false; }, 800);
   });
 }
 
