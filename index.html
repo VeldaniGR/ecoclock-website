@@ -496,6 +496,25 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
 /* =================== RTL (Arabic) =================== */
 [dir="rtl"] .select-wrap::after{inset-inline-end:12px}
 [dir="rtl"] .scroll-cue .chev{display:inline-block; transform:scaleX(-1)}
+
+/* ---- verificación / cómputo distribuido ---- */
+.verificacion{
+  max-width:40rem;
+  margin:2rem auto;
+  padding:1.25rem 0;
+}
+.verificacion ul{
+  padding-inline-start:1.25rem;
+  margin:1rem 0;
+}
+.verificacion li{ margin-bottom:.55rem; }
+.verificacion .nota{
+  opacity:.85;
+  font-size:.95rem;
+  color:var(--text-dim);
+}
+.verificacion a{ color:var(--accent); text-underline-offset:3px; }
+
 </style>
 
 <script type="application/ld+json">
@@ -776,7 +795,6 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
   <section id="sos" class="container sos-section">
     <div class="section-headrow section-head">
       <div>
-        <h2>⚠️​ Under construction ⚠️​</h2>
         <span class="eyebrow" data-i18n="sos_eyebrow"></span>
         <h2>Eco'clock S.O.S.</h2>
         <p data-i18n="sos_subtitle"></p>
@@ -802,6 +820,25 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
 
     <a class="btn btn-primary" href="https://crisis.ecoclock.org" target="_blank" rel="noopener" data-i18n="sos_cta"></a>
   </section>
+
+<section id="verificacion" class="container verificacion">
+  <span class="eyebrow" data-i18n="verify_eyebrow"></span>
+  <h2 data-i18n="verify_title"></h2>
+  <p data-i18n="verify_intro"></p>
+  <ul>
+    <li><strong data-i18n="verify_li1_label"></strong> <span data-i18n="verify_li1_text"></span></li>
+    <li><strong data-i18n="verify_li2_label"></strong> <span data-i18n="verify_li2_text"></span></li>
+    <li><strong data-i18n="verify_li3_label"></strong> <span data-i18n="verify_li3_text"></span></li>
+    <li><strong data-i18n="verify_li4_label"></strong> <span data-i18n="verify_li4_text"></span></li>
+  </ul>
+  <p class="nota" data-i18n="verify_note"></p>
+  <p>
+    <a href="https://github.com/VeldaniGR/ecoclock-network#c%C3%B3mo-comprobamos-los-resultados"
+       target="_blank" rel="noopener"
+       data-i18n="verify_more"></a>
+  </p>
+</section>
+
 </main>
 
 <footer>
@@ -981,6 +1018,21 @@ ca:{translation:{
   ,sos_step2:"Dones directament a l'organització escollida; Eco'clock no reté ni gestiona els fons."
   ,sos_step3:"Actualitzem la fitxa de la crisi a mesura que arriba nova informació contrastable."
   ,sos_cta:"Veure crisis actives a l'app"
+  // es (y copia la estructura a ca, eu, en, fr, de, it, pt, zh, ja, ru, ar)
+  ,verify_eyebrow: "Transparència",
+  verify_title: "Com comprovem els resultats",
+  verify_intro: "No acceptem a cegues allò que envia cada ordinador. Combinem filtres automàtics, contrast entre diversos equips, controls de qualitat i revisió humana quan cal.",
+  verify_li1_label: "En enviar:",
+  verify_li1_text: "format correcte i valors amb sentit.",
+  verify_li2_label: "Entre participants:",
+  verify_li2_text: "la mateixa tasca es pot repetir; si coincideixen, la dada es valida.",
+  verify_li3_label: "Per lots:",
+  verify_li3_text: "busquem biaixos o resultats anòmals.",
+  verify_li4_label: "Quan cal:",
+  verify_li4_text: "revisió de lequip en zones pilot o abans de publicar.",
+  verify_note: "Els crèdits reconeixen la teva participació. La qualitat de les dades es consolida en passar aquests filtres. En beta, part del càlcul és de prova i ho indiquem.",
+  verify_more: "Més detall al projecte tècnic →",
+  nav_verify: "Verificació",  // solo si añades el enlace en el menú
 }},
 es:{translation:{
   lang_label:"Idioma", theme_label:"Vista", theme_day:"Día", theme_dusk:"Crepúsculo", theme_night:"Noche", theme_auto:"Automático",
@@ -1032,6 +1084,21 @@ es:{translation:{
   ,sos_step2:"Donas directamente a la organización elegida; Eco'clock no retiene ni gestiona los fondos."
   ,sos_step3:"Actualizamos la ficha de la crisis a medida que llega nueva información contrastable."
   ,sos_cta:"Ver crisis activas en la app"
+  // es (y copia la estructura a ca, eu, en, fr, de, it, pt, zh, ja, ru, ar)
+  ,verify_eyebrow: "Transparencia",
+  verify_title: "Cómo comprobamos los resultados",
+  verify_intro: "No aceptamos a ciegas lo que envía cada ordenador. Combinamos filtros automáticos, contraste entre varios equipos, controles de calidad y revisión humana cuando hace falta.",
+  verify_li1_label: "Al enviar:",
+  verify_li1_text: "formato correcto y valores con sentido.",
+  verify_li2_label: "Entre participantes:",
+  verify_li2_text: "la misma tarea puede repetirse; si coinciden, el dato se valida.",
+  verify_li3_label: "Por lotes:",
+  verify_li3_text: "buscamos sesgos o resultados anómalos.",
+  verify_li4_label: "Cuando hace falta:",
+  verify_li4_text: "revisión del equipo en zonas piloto o antes de publicar.",
+  verify_note: "Los créditos reconocen tu participación. La calidad de los datos se consolida al pasar estos filtros. En beta, parte del cálculo es de prueba y lo indicamos.",
+  verify_more: "Más detalle en el proyecto técnico →",
+  nav_verify: "Verificación",  // solo si añades el enlace en el menú
 }},
 eu:{translation:{
   lang_label:"Hizkuntza", theme_label:"Ikuspegia", theme_day:"Eguna", theme_dusk:"Ilunabarra", theme_night:"Gaua", theme_auto:"Automatikoa",
@@ -1083,6 +1150,21 @@ eu:{translation:{
   ,sos_step2:"Aukeratutako erakundeari zuzenean dohaintzen diozu; Eco'clock-ek ez ditu funtsak erretenitzen edo kudeatzen."
   ,sos_step3:"Krisiaren fitxa eguneratzen dugu informazio berri eta egiaztagarria iristen den heinean."
   ,sos_cta:"Ikusi aplikazioan krisi aktiboak"
+  // es (y copia la estructura a ca, eu, en, fr, de, it, pt, zh, ja, ru, ar)
+  ,verify_eyebrow: "Gardentasuna",
+  verify_title: "Emaitzak nola egiaztatzen ditugun",
+  verify_intro: "Ez dugu itsu-itsuan onartzen ordenagailu bakoitzak bidaltzen duena. Iragazki automatizatuak, hainbat sistemaren arteko egiaztapen gurutzatuak, kalitate-kontrolak eta beharrezkoa denean gizakien berrikuspena konbinatzen ditugu.",
+  verify_li1_label: "Aurkeztean:",
+  verify_li1_text: "formatu zuzena eta balio esanguratsuak.",
+  verify_li2_label: "Parte-hartzaileen artean:",
+  verify_li2_text: "Zeregin bera errepika daiteke; bat badatoz, datuak baliozkotu egiten dira.",
+  verify_li3_label: "Sortaka:",
+  verify_li3_text: "Joerak edo emaitza anomaloak bilatzen ditugu.",
+  verify_li4_label: "Beharrezkoa denean:",
+  verify_li4_text: "Taldearen berrikuspena, proba-eremuetan edo argitaratu aurretik.",
+  verify_note: "Kredituek zure parte-hartzea aitortzen dute. Iragazki horietatik igarotzeak datuen kalitatea sendotzen du. Beta fasean, kalkuluaren zati bat esperimentala da, eta hori adierazten dugu.",
+  verify_more: "Xehetasun gehiago proiektu teknikoan →",
+  nav_verify: "Egiaztapena",  // solo si añades el enlace en el menú
 }},
 en:{translation:{
   lang_label:"Language", theme_label:"View", theme_day:"Day", theme_dusk:"Dusk", theme_night:"Night", theme_auto:"Auto",
@@ -1134,6 +1216,21 @@ en:{translation:{
   ,sos_step2:"You donate directly to the chosen organization; Eco'clock does not hold or manage the funds."
   ,sos_step3:"We update the crisis page as new, checkable information comes in."
   ,sos_cta:"See active crises in the app"
+  // es (y copia la estructura a ca, eu, en, fr, de, it, pt, zh, ja, ru, ar)
+  ,verify_eyebrow: "Transparency",
+  verify_title: "How we verify the results",
+  verify_intro: "We do not blindly accept what each computer sends. We combine automated filters, cross-checks between multiple systems, quality controls, and human review when necessary.",
+  verify_li1_label: "Upon submission:",
+  verify_li1_text: "correct format and meaningful values.",
+  verify_li2_label: "Among participants:",
+  verify_li2_text: "The same task can be repeated; if they match, the data is validated.",
+  verify_li3_label: "By batch:",
+  verify_li3_text: "We look for biases or anomalous results.",
+  verify_li4_label: "When required:",
+  verify_li4_text: "Team review in pilot zones or prior to publication.",
+  verify_note: "Credits acknowledge your participation. Data quality is solidified by passing through these filters. During the beta phase, part of the calculation is experimental, and we indicate this.",
+  verify_more: "More details in the technical project →",
+  nav_verify: "Verification",  // solo si añades el enlace en el menú
 }},
 fr:{translation:{
   lang_label:"Langue", theme_label:"Affichage", theme_day:"Jour", theme_dusk:"Crépuscule", theme_night:"Nuit", theme_auto:"Auto",
@@ -1185,6 +1282,21 @@ fr:{translation:{
   ,sos_step2:"Vous faites un don directement à l'organisation choisie ; Eco'clock ne détient ni ne gère les fonds."
   ,sos_step3:"Nous mettons à jour la page consacrée à la crise à mesure que nous parviennent des informations nouvelles et vérifiables."
   ,sos_cta:"Consultez les crises en cours dans l'application"
+  // es (y copia la estructura a ca, eu, en, fr, de, it, pt, zh, ja, ru, ar)
+  ,verify_eyebrow: "Transparence",
+  verify_title: "Comment nous vérifions les résultats",
+  verify_intro: "Nous n'acceptons pas aveuglément les données envoyées par chaque ordinateur. Nous combinons des filtres automatiques, des recoupements entre différents systèmes, des contrôles qualité et une vérification humaine lorsque cela s'avère nécessaire.",
+  verify_li1_label: "Lors de l'envoi :",
+  verify_li1_text: "format correct et valeurs cohérentes.",
+  verify_li2_label: "Entre participants :",
+  verify_li2_text: "La même tâche peut être répétée ; en cas de concordance, la donnée est validée.",
+  verify_li3_label: "Par lots :",
+  verify_li3_text: "Nous recherchons des biais ou des résultats anormaux.",
+  verify_li4_label: "Quand c'est nécessaire :",
+  verify_li4_text: "Vérification par l'équipe dans les zones pilotes ou avant la publication.",
+  verify_note: "Les crédits reconnaissent votre participation. La qualité des données est consolidée grâce à ces filtres. En phase bêta, une partie du calcul est à titre d'essai, ce que nous signalons.",
+  verify_more: "Plus de détails dans le projet technique →",
+  nav_verify: "Vérification",  // solo si añades el enlace en el menú
 }},
 de:{translation:{
   lang_label:"Sprache", theme_label:"Ansicht", theme_day:"Tag", theme_dusk:"Dämmerung", theme_night:"Nacht", theme_auto:"Automatisch",
@@ -1236,6 +1348,21 @@ de:{translation:{
   ,sos_step2:"Sie spenden direkt an die ausgewählte Organisation; Eco'clock verwahrt oder verwaltet die Gelder nicht."
   ,sos_step3:"Wir aktualisieren die Krisenseite, sobald neue, überprüfbare Informationen vorliegen."
   ,sos_cta:"Aktive Krisen in der App anzeigen"
+  // es (y copia la estructura a ca, eu, en, fr, de, it, pt, zh, ja, ru, ar)
+  ,verify_eyebrow: "Transparenz",
+  verify_title: "Wie wir die Ergebnisse überprüfen",
+  verify_intro: "Wir akzeptieren nicht blindlings, was die einzelnen Computer übermitteln. Wir kombinieren automatische Filter, den Abgleich zwischen verschiedenen Systemen, Qualitätskontrollen sowie – bei Bedarf – eine manuelle Überprüfung.",
+  verify_li1_label: "Beim Absenden:",
+  verify_li1_text: "korrektes Format und sinnvolle Werte.",
+  verify_li2_label: "Unter den Teilnehmern:",
+  verify_li2_text: "Dieselbe Aufgabe kann wiederholt werden; bei Übereinstimmung wird der Datensatz validiert.",
+  verify_li3_label: "Chargenweise:",
+  verify_li3_text: "Wir suchen nach Verzerrungen oder anomalen Ergebnissen.",
+  verify_li4_label: "Wenn es nötig ist:",
+  verify_li4_text: "Überprüfung durch das Team in Pilotgebieten oder vor der Veröffentlichung.",
+  verify_note: "Die Credits würdigen Ihre Teilnahme. Die Datenqualität wird durch das Durchlaufen dieser Filter gefestigt. In der Beta-Phase handelt es sich bei einem Teil der Berechnung um einen Testlauf; darauf weisen wir hin.",
+  verify_more: "Weitere Einzelheiten im technischen Projekt →",
+  nav_verify: "Überprüfung",  // solo si añades el enlace en el menú
 }},
 it:{translation:{
   lang_label:"Lingua", theme_label:"Vista", theme_day:"Giorno", theme_dusk:"Crepuscolo", theme_night:"Notte", theme_auto:"Automatico",
@@ -1287,6 +1414,21 @@ it:{translation:{
   ,sos_step2:"Effettui la donazione direttamente all'organizzazione scelta; Eco'clock non detiene né gestisce i fondi."
   ,sos_step3:"Aggiorniamo la pagina dedicata alla crisi man mano che arrivano nuove informazioni verificabili."
   ,sos_cta:"Visualizza le crisi in corso nell'app"
+  // es (y copia la estructura a ca, eu, en, fr, de, it, pt, zh, ja, ru, ar)
+  ,verify_eyebrow: "Trasparenza",
+  verify_title: "Come verifichiamo i risultati",
+  verify_intro: "Non accettiamo acriticamente quanto trasmesso da ciascun computer. Combiniamo filtri automatizzati, verifiche incrociate tra più sistemi, controlli di qualità e, ove necessario, una revisione umana.",
+  verify_li1_label: "Al momento dell'invio:",
+  verify_li1_text: "formato corretto e valori significativi.",
+  verify_li2_label: "Tra i partecipanti:",
+  verify_li2_text: "La stessa operazione può essere ripetuta; se corrispondono, i dati vengono convalidati.",
+  verify_li3_label: "Per lotto:",
+  verify_li3_text: "Cerchiamo distorsioni o risultati anomali.",
+  verify_li4_label: "Quando richiesto:",
+  verify_li4_text: "Revisione da parte del team nelle zone pilota o prima della pubblicazione.",
+  verify_note: "I crediti riconoscono la tua partecipazione. La qualità dei dati viene consolidata attraverso questi filtri. Durante la fase beta, parte del calcolo è di natura sperimentale; tale aspetto viene segnalato.",
+  verify_more: "Maggiori dettagli nel progetto tecnico →",
+  nav_verify: "Verifica",  // solo si añades el enlace en el menú
 }},
 pt:{translation:{
   lang_label:"Idioma", theme_label:"Visualização", theme_day:"Dia", theme_dusk:"Crepúsculo", theme_night:"Noite", theme_auto:"Automático",
@@ -1338,6 +1480,21 @@ pt:{translation:{
   ,sos_step2:"Você doa diretamente para a organização escolhida; a Eco'clock não retém nem gerencia os recursos."
   ,sos_step3:"Atualizamos a página sobre a crise à medida que novas informações verificáveis ​​são recebidas."
   ,sos_cta:"Veja as crises ativas no aplicativo"
+  // es (y copia la estructura a ca, eu, en, fr, de, it, pt, zh, ja, ru, ar)
+  ,verify_eyebrow: "Transparência",
+  verify_title: "Como verificamos os resultados",
+  verify_intro: "Não aceitamos cegamente o que cada computador envia. Combinamos filtros automáticos, comparação entre vários equipamentos, controles de qualidade e revisão humana quando necessário.",
+  verify_li1_label: "Ao enviar:",
+  verify_li1_text: "formato correto e valores com sentido.",
+  verify_li2_label: "Entre os participantes:",
+  verify_li2_text: "A mesma tarefa pode ser repetida; se coincidirem, o dado é validado.",
+  verify_li3_label: "Por lote:",
+  verify_li3_text: "Buscamos vieses ou resultados anômalos.",
+  verify_li4_label: "Quando é necessário:",
+  verify_li4_text: "revisão pela equipe em áreas-piloto ou antes da publicação.",
+  verify_note: "Os créditos reconhecem a sua participação. A qualidade dos dados é consolidada ao passar por esses filtros. Na versão beta, parte do cálculo é de teste, e indicamos isso.",
+  verify_more: "Mais detalhes no projeto técnico →",
+  nav_verify: "Verificação",  // solo si añades el enlace en el menú
 }},
 zh:{translation:{
   lang_label:"语言", theme_label:"视图", theme_day:"白天", theme_dusk:"黄昏", theme_night:"夜晚", theme_auto:"自动",
@@ -1389,6 +1546,21 @@ zh:{translation:{
   ,sos_step2:"您直接向選定的組織捐款；Eco'clock 不持有或管理這些資金。"
   ,sos_step3:"我們會隨著新的、可核實資訊的到來，更新危機頁面。"
   ,sos_cta:"在應用程式中查看當前的危機狀況"
+  // es (y copia la estructura a ca, eu, en, fr, de, it, pt, zh, ja, ru, ar)
+  ,verify_eyebrow: "透明度",
+  verify_title: "我們如何驗證結果",
+  verify_intro: "我們不會盲目接收各台電腦發送的數據，而是結合了自動過濾、多系統交叉核對、品質控制以及必要時的人工審核。",
+  verify_li1_label: "提交時：",
+  verify_li1_text: "正確的格式和有意義的值。",
+  verify_li2_label: "在參與者中：",
+  verify_li2_text: "同一任務可以重複執行；如果匹配，資料即獲驗證。",
+  verify_li3_label: "按批次：",
+  verify_li3_text: "我們尋找偏差或異常​​結果。",
+  verify_li4_label: "必要時：",
+  verify_li4_text: "在試點區域或發布前進行團隊評審。",
+  verify_note: "積分是對您參與貢獻的認可。數據在通過這些篩選機制後，其品質得以鞏固。在測試（Beta）階段，部分計算過程屬於實驗性質，我們會對此進行說明。",
+  verify_more: "更多詳情請見技術項目 →",
+  nav_verify: "確認",  // solo si añades el enlace en el menú
 }},
 ja:{translation:{
   lang_label:"言語", theme_label:"表示", theme_day:"昼", theme_dusk:"たそがれ", theme_night:"夜", theme_auto:"自動",
@@ -1440,6 +1612,21 @@ ja:{translation:{
   ,sos_step2:"選定された団体へ直接寄付を行います。Eco'clockが資金を預かったり管理したりすることはありません。"
   ,sos_step3:"確認可能な新しい情報が入り次第、危機対応ページを更新します。"
   ,sos_cta:"アプリで現在進行中の危機的状況を確認する"
+  // es (y copia la estructura a ca, eu, en, fr, de, it, pt, zh, ja, ru, ar)
+  ,verify_eyebrow: "透明性",
+  verify_title: "結果の検証方法",
+  verify_intro: "各コンピュータから送信されるデータを、そのまま無条件に受け入れることはありません。自動化されたフィルタ、複数のシステム間でのクロスチェック、品質管理、そして必要に応じた人手による確認を組み合わせて対応しています。",
+  verify_li1_label: "提出時：",
+  verify_li1_text: "正しい形式と意味のある値。",
+  verify_li2_label: "参加者のうち：",
+  verify_li2_text: "同じタスクを繰り返すことができ、それらが一致すればデータは検証されます。",
+  verify_li3_label: "バッチ単位で：",
+  verify_li3_text: "私たちは、バイアスや異常な結果がないかを確認します。",
+  verify_li4_label: "必要な場合：",
+  verify_li4_text: "パイロットゾーンにおける、または公開前のチームによるレビュー。",
+  verify_note: "クレジットは、お客様の参加を認めるものです。こうしたフィルターを通すことで、データの品質が確実なものとなります。ベータ版の期間中は、計算の一部が実験的なものとなっており、その旨を明記しています。",
+  verify_more: "技術プロジェクトの詳細はこちら →",
+  nav_verify: "検証",  // solo si añades el enlace en el menú
 }},
 ru:{translation:{
   lang_label:"Язык", theme_label:"Вид", theme_day:"День", theme_dusk:"Сумерки", theme_night:"Ночь", theme_auto:"Авто",
@@ -1491,6 +1678,21 @@ ru:{translation:{
   ,sos_step2:"Вы делаете пожертвование напрямую выбранной организации; Eco'clock не хранит эти средства и не управляет ими."
   ,sos_step3:"Мы обновляем страницу, посвященную кризисной ситуации, по мере поступления новой, поддающейся проверке информации."
   ,sos_cta:"Смотрите информацию об активных кризисных ситуациях в приложении."
+  // es (y copia la estructura a ca, eu, en, fr, de, it, pt, zh, ja, ru, ar)
+  ,verify_eyebrow: "Прозрачность",
+  verify_title: "Как мы проверяем результаты",
+  verify_intro: "Мы не принимаем безоговорочно данные, поступающие с каждого компьютера. Мы используем сочетание автоматических фильтров, перекрестной проверки данных в различных системах, контроля качества и, при необходимости, проверки специалистами.",
+  verify_li1_label: "При подаче:",
+  verify_li1_text: "корректный формат и осмысленные значения.",
+  verify_li2_label: "Среди участников:",
+  verify_li2_text: "Ту же задачу можно повторить; если результаты совпадают, данные считаются проверенными.",
+  verify_li3_label: "По партиям:",
+  verify_li3_text: "Мы ищем систематические искажения или аномальные результаты.",
+  verify_li4_label: "При необходимости:",
+  verify_li4_text: "Проверка командой в пилотных зонах или перед публикацией.",
+  verify_note: "Кредиты подтверждают ваше участие. Прохождение через эти фильтры обеспечивает высокое качество данных. На этапе бета-тестирования часть расчетов носит экспериментальный характер, о чем мы сообщаем.",
+  verify_more: "Подробности — в техническом проекте →",
+  nav_verify: "Проверка",  // solo si añades el enlace en el menú
 }},
 ar:{translation:{
   lang_label:"اللغة", theme_label:"المظهر", theme_day:"نهار", theme_dusk:"غسق", theme_night:"ليل", theme_auto:"تلقائي",
@@ -1542,6 +1744,21 @@ ar:{translation:{
   ,sos_step2:"أنت تتبرع مباشرةً للمنظمة المختارة؛ ولا تقوم Eco'clock بحيازة الأموال أو إدارتها."
   ,sos_step3:"نقوم بتحديث صفحة الأزمة كلما وردت معلومات جديدة يمكن التحقق منها."
   ,sos_cta:"اطلع على الأزمات النشطة في التطبيق"
+  // es (y copia la estructura a ca, eu, en, fr, de, it, pt, zh, ja, ru, ar)
+  ,verify_eyebrow: "الشفافية",
+  verify_title: "كيف نتحقق من النتائج",
+  verify_intro: "نحن لا نقبل بشكل أعمى ما ترسله كل حاسبة؛ بل نجمع بين المرشحات الآلية، وعمليات التحقق المتقاطع بين أنظمة متعددة، وضوابط الجودة، والمراجعة البشرية عند الضرورة.",
+  verify_li1_label: "عند التقديم:",
+  verify_li1_text: "تنسيق صحيح وقيم ذات دلالة.",
+  verify_li2_label: "من بين المشاركين:",
+  verify_li2_text: "يمكن تكرار المهمة نفسها؛ فإذا تطابقت النتائج، يتم التحقق من صحة البيانات.",
+  verify_li3_label: "حسب الدفعة:",
+  verify_li3_text: "نبحث عن انحيازات أو نتائج شاذة.",
+  verify_li4_label: "عند الاقتضاء:",
+  verify_li4_text: "مراجعة الفريق في المناطق التجريبية أو قبل النشر.",
+  verify_note: "تُمنح النقاط (Credits) تقديراً لمشاركتك، وتتعزز جودة البيانات بفضل مرورها عبر هذه المرشحات. وفي مرحلة الإصدار التجريبي (Beta)، يكون جزء من عملية الحساب تجريبياً، ونحن نوضح ذلك.",
+  verify_more: "مزيد من التفاصيل في المشروع الفني ←",
+  nav_verify: "تَحَقّق",  // solo si añades el enlace en el menú
 }}
 };
 
