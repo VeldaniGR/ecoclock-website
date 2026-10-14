@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eco'clock — Red de datos ambientales</title>
-<meta name="description" content="Eco'clock Network: bosques, arrecifes, hielo, agua, energía y delitos ambientales en un único tablero, actualizado cada 6–12 horas.">
+<meta name="description" content="Eco'clock Network: bosques, hongos, hielo, agua, energía y delitos ambientales en un único tablero, actualizado cada 6–12 horas.">
 
 <!-- ============================================================
      SITE CONFIG — edit SITE_CONFIG in the script + the tags below
@@ -523,7 +523,7 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
   "@type": "WebSite",
   "name": "Eco'clock Network",
   "url": "https://app.ecoclock.example/",
-  "description": "El pulso del planeta, medido cada 6 a 12 horas. Bosques, arrecifes, hielo, agua, energía y delitos ambientales en un único tablero.",
+  "description": "El pulso del planeta, medido cada 6 a 12 horas. Bosques, hongos, hielo, agua, energía y delitos ambientales en un único tablero.",
   "publisher": { "@type": "Organization", "name": "Eco'clock Network" },
   "inLanguage": ["es","en","fr","de","it","pt","zh","ja","ru","ar"]
 }
@@ -683,20 +683,21 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
 
     <h3 style="margin-top:52px; margin-bottom:0; font-size:1.15rem" data-i18n="secondary_title"></h3>
     <div class="grid-secondary">
-      <article class="card" data-card="coral">
+      <article class="card" data-card="fungi">
         <div class="card-top">
-          <div class="card-icon" aria-hidden="true">🪸</div>
-          <a class="card-source" href="https://www.aims.gov.au" target="_blank" rel="noopener">AIMS ↗</a>
+          <div class="card-icon" aria-hidden="true">🍄</div>
+          <a class="card-source" href="https://www.inaturalist.org/observations?taxon_id=47170&place_id=6753" target="_blank" rel="noopener">iNaturalist ↗</a>
         </div>
-        <h3 data-i18n="card_coral_title"></h3>
+        <h3 data-i18n="card_fungi_title"></h3>
         <div class="stat-list">
-          <div class="stat-row"><span class="stat-label" data-i18n="stat_bleaching"></span><span class="stat-value" data-stat="coral.bleaching"></span></div>
-          <div class="stat-row"><span class="stat-label" data-i18n="stat_reef_stress"></span><span class="stat-value" data-stat="coral.reefStress"></span></div>
+          <div class="stat-row"><span class="stat-label" data-i18n="stat_fungi_obs_7d"></span><span class="stat-value" data-stat="fungi.obs7d"></span></div>
+          <div class="stat-row"><span class="stat-label" data-i18n="stat_fungi_species_30d"></span><span class="stat-value" data-stat="fungi.species30d"></span></div>
+          <div class="stat-row"><span class="stat-label" data-i18n="stat_fungi_gbif"></span><span class="stat-value" data-stat="fungi.gbifCount"></span></div>
         </div>
         <div class="card-foot">
-          <span class="badge badge-ref" data-i18n="badge_ref"></span>
-          <span><span data-i18n="last_updated"></span>: <span data-stat="coral.lastUpdated"></span></span>
-          <span class="countdown" data-countdown="coral">--:--:--</span> <span class="trend-ind" data-trend="coral" aria-hidden="true"></span><span class="anomaly-badge" data-anomaly="coral" hidden>!</span>
+          <span class="badge badge-live" data-i18n="badge_live"></span>
+          <span><span data-i18n="last_updated"></span>: <span data-stat="fungi.lastUpdated"></span></span>
+          <span class="countdown" data-countdown="fungi">--:--:--</span> <span class="trend-ind" data-trend="fungi" aria-hidden="true"></span><span class="anomaly-badge" data-anomaly="fungi" hidden>!</span>
         </div>
       </article>
 
@@ -870,7 +871,8 @@ footer{border-top:1px solid var(--border); padding-block:52px 40px; background:v
         <li><a href="https://www.globalforestwatch.org" target="_blank" rel="noopener">Global Forest Watch (GFW)</a></li>
         <li><a href="https://atlasposidonia.com/es/" target="_blank" rel="noopener">Atles de la Posidònia</a></li>
         <li><a href="https://ideib.caib.es/posidonia/" target="_blank" rel="noopener">IDEIB — Cartografia Posidonia</a></li>
-        <li><a href="https://www.aims.gov.au" target="_blank" rel="noopener">AIMS</a></li>
+        <li><a href="https://www.inaturalist.org/observations?taxon_id=47170&place_id=6753" target="_blank" rel="noopener">iNaturalist — Fungi</a></li>
+        <li><a href="https://www.gbif.org/occurrence/search?country=ES&taxon_key=5" target="_blank" rel="noopener">GBIF — Fungi España</a></li>
         <li><a href="https://www.eia.gov" target="_blank" rel="noopener">EIA</a></li>
         <li><a href="https://www.fao.org/faostat" target="_blank" rel="noopener">FAOSTAT</a></li>
         <li><a href="https://www.fao.org/aquastat" target="_blank" rel="noopener">AQUASTAT</a></li>
@@ -973,7 +975,7 @@ ca:{translation:{
   hero_local_time_label:"La teva hora local",
   hero_eyebrow:"Monitor ambiental en temps real · 2026",
   hero_title_line1:"El planeta sagna.", hero_title_line2:"Les dades no menteixen.",
-  hero_subtitle:"Cada segon, Eco'clock reuneix els registres públics de boscos, esculls, gel, aigua, energia i delictes ambientals en un únic tauler. Mira. Comparteix. Actua.",
+  hero_subtitle:"Cada segon, Eco'clock reuneix els registres públics de boscos, fongs, gel, aigua, energia i delictes ambientals en un únic tauler. Mira. Comparteix. Actua.",
   badge_beta:"BETA", download_beta:"Descarregar Beta", hero_scroll_cta:"Veure l'estat del planeta", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Estat actual", status_title:"Dos senyals que més preocupen",
   status_subtitle:"La desforestació i el retrocés de les praderies de posidònia concentren el major risc de pèrdua irreversible. La resta d'indicadors completa el panorama.",
@@ -981,6 +983,8 @@ ca:{translation:{
   card_deforestation_title:"Desforestació", card_deforestation_desc:"Alertes de pèrdua de cobertura arbòria detectades per satèl·lit.",
   stat_area_lost:"Superfície perduda (24 h, estimat)", stat_alerts:"Alertes GLAD actives", stat_top_region:"Regió amb més alertes",
   status_demo:"Demo", last_updated:"Actualitzat", next_update:"Propera actualització",
+  card_fungi_title:"Biodiversitat de fongs", card_fungi_desc:"Observacions de ciència ciutadana del regne Fungi a Espanya (iNaturalist).",
+  stat_fungi_obs_7d:"Observacions (7 dies)", stat_fungi_species_30d:"Espècies diferents (30 dies)", stat_fungi_gbif:"Registres GBIF (Espanya)",
   card_coral_title:"Esculls de corall", card_coral_desc:"Estrès tèrmic i blanqueig als esculls monitorats.",
   stat_bleaching:"Nivell de blanqueig", stat_reef_stress:"Esculls sota estrès tèrmic", stat_watch_region:"Regió en vigilància",
   card_posidonia_title:"Posidonia oceànica", card_posidonia_desc:"Superfície de praderies marines de Posidonia oceanica, planta endèmica del Mediterrani, cartografiada per organismes oficials.",
@@ -1039,7 +1043,7 @@ es:{translation:{
   hero_local_time_label:"Tu hora local",
   hero_eyebrow:"Monitor ambiental en tiempo real · 2026",
   hero_title_line1:"El planeta sangra.", hero_title_line2:"Los datos no mienten.",
-  hero_subtitle:"Cada segundo, Eco'clock reúne los registros públicos de bosques, arrecifes, hielo, agua, energía y delitos ambientales en un único tablero. Mira. Comparte. Actúa.",
+  hero_subtitle:"Cada segundo, Eco'clock reúne los registros públicos de bosques, hongos, hielo, agua, energía y delitos ambientales en un único tablero. Mira. Comparte. Actúa.",
   badge_beta:"BETA", download_beta:"Descargar Beta", hero_scroll_cta:"Ver el estado del planeta", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Estado actual", status_title:"Dos señales que más preocupan",
   status_subtitle:"La deforestación y la regresión de las praderas de posidonia concentran el mayor riesgo de pérdida irreversible. El resto de indicadores completa el panorama.",
@@ -1047,6 +1051,8 @@ es:{translation:{
   card_deforestation_title:"Deforestación", card_deforestation_desc:"Alertas de pérdida de cobertura arbórea detectadas por satélite.",
   stat_area_lost:"Superficie perdida (24 h, estimado)", stat_alerts:"Alertas GLAD activas", stat_top_region:"Región con más alertas",
   status_demo:"Demo", last_updated:"Actualizado", next_update:"Próxima actualización",
+  card_fungi_title:"Biodiversidad de hongos", card_fungi_desc:"Observaciones de ciencia ciudadana del reino Fungi en España (iNaturalist).",
+  stat_fungi_obs_7d:"Observaciones (7 días)", stat_fungi_species_30d:"Especies distintas (30 días)", stat_fungi_gbif:"Registros GBIF (España)",
   card_coral_title:"Arrecifes de coral", card_coral_desc:"Estrés térmico y blanqueamiento en los arrecifes monitoreados.",
   stat_bleaching:"Nivel de blanqueamiento", stat_reef_stress:"Arrecifes bajo estrés térmico", stat_watch_region:"Región en vigilancia",
   card_posidonia_title:"Posidonia oceánica", card_posidonia_desc:"Superficie de praderas marinas de Posidonia oceanica, planta endémica del Mediterráneo, cartografiada por organismos oficiales.",
@@ -1105,7 +1111,7 @@ eu:{translation:{
   hero_local_time_label:"Zure ordu lokala",
   hero_eyebrow:"Ingurumen-monitorea denbora errealean · 2026",
   hero_title_line1:"Planeta odoletan dago.", hero_title_line2:"Datuek ez dute gezurrik esaten.",
-  hero_subtitle:"Segundoro, Eco'clock-ek basoen, itsas arrezifeen, izotzaren, uraren, energiaren eta ingurumen-delituen erregistro publikoak biltzen ditu panel bakar batean. Begiratu. Partekatu. Ekin.",
+  hero_subtitle:"Segundooro, Eco'clock-ek basoei, onddoei, izotzari, urari, energiari eta ingurumen-delituei buruzko erregistro publikoak bildu eta aginte-panel bakar batean aurkezten ditu. Ikusi. Partekatu. Ekin.",
   badge_beta:"BETA", download_beta:"Beta deskargatu", hero_scroll_cta:"Ikusi planetaren egoera", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Egungo egoera", status_title:"Kezka handiena sortzen duten bi seinaleak",
   status_subtitle:"Baso-soiltzeak eta posidonia belar-larreen atzerakadak dute galera itzulezinaren arriskurik handiena. Gainerako adierazleek panorama osatzen dute.",
@@ -1113,6 +1119,8 @@ eu:{translation:{
   card_deforestation_title:"Baso-soiltzea", card_deforestation_desc:"Satelite bidez hautemandako zuhaitz-estalduraren galera-alertak.",
   stat_area_lost:"Galdutako azalera (24 h, kalkulatua)", stat_alerts:"GLAD alerta aktiboak", stat_top_region:"Alerta gehien dituen eskualdea",
   status_demo:"Demoa", last_updated:"Eguneratuta", next_update:"Hurrengo eguneratzea",
+  card_fungi_title:"Onddoen biodibertsitatea", card_fungi_desc:"Fungi erreinuko zientzia-herritarren behaketak Espainian (iNaturalist).",
+  stat_fungi_obs_7d:"Behaketak (7 egun)", stat_fungi_species_30d:"Espezie desberdinak (30 egun)", stat_fungi_gbif:"GBIF erregistroak (Espainia)",
   card_coral_title:"Itsas arrezifeak", card_coral_desc:"Estres termikoa eta zuritzea kontrolatutako arrezifeetan.",
   stat_bleaching:"Zuritze-maila", stat_reef_stress:"Estres termikopean dauden arrezifeak", stat_watch_region:"Zaintzapeko eskualdea",
   card_posidonia_title:"Posidonia oceanica", card_posidonia_desc:"Mediterraneoko landare endemikoa den Posidonia oceanicaren belar-larre itsastarren azalera, erakunde ofizialek kartografiatua.",
@@ -1171,7 +1179,7 @@ en:{translation:{
   hero_local_time_label:"Your local time",
   hero_eyebrow:"Real-time environmental monitor · 2026",
   hero_title_line1:"The planet is bleeding.", hero_title_line2:"The data doesn't lie.",
-  hero_subtitle:"Every second, Eco'clock brings together public records on forests, reefs, ice, water, energy and environmental crime in a single dashboard. Watch. Share. Act.",
+  hero_subtitle:"Every second, Eco'clock gathers public records on forests, fungi, ice, water, energy, and environmental crimes into a single dashboard. View. Share. Act.",
   badge_beta:"BETA", download_beta:"Download Beta", hero_scroll_cta:"See the planet's status", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Current status", status_title:"Two signals we watch closest",
   status_subtitle:"Deforestation and the regression of Posidonia seagrass meadows carry the highest risk of irreversible loss. The other indicators fill out the picture.",
@@ -1179,6 +1187,8 @@ en:{translation:{
   card_deforestation_title:"Deforestation", card_deforestation_desc:"Satellite-detected tree cover loss alerts.",
   stat_area_lost:"Area lost (24 h, estimated)", stat_alerts:"Active GLAD alerts", stat_top_region:"Region with most alerts",
   status_demo:"Demo", last_updated:"Updated", next_update:"Next update",
+  card_fungi_title:"Fungal biodiversity", card_fungi_desc:"Citizen-science observations of kingdom Fungi in Spain (iNaturalist).",
+  stat_fungi_obs_7d:"Observations (7 days)", stat_fungi_species_30d:"Distinct species (30 days)", stat_fungi_gbif:"GBIF records (Spain)",
   card_coral_title:"Coral reefs", card_coral_desc:"Heat stress and bleaching across monitored reefs.",
   stat_bleaching:"Bleaching level", stat_reef_stress:"Reefs under heat stress", stat_watch_region:"Region under watch",
   card_posidonia_title:"Posidonia seagrass", card_posidonia_desc:"Mapped extent of Posidonia oceanica meadows, an endemic Mediterranean seagrass, surveyed by official cartography agencies.",
@@ -1237,7 +1247,7 @@ fr:{translation:{
   hero_local_time_label:"Votre heure locale",
   hero_eyebrow:"Moniteur environnemental en temps réel · 2026",
   hero_title_line1:"La planète saigne.", hero_title_line2:"Les données ne mentent pas.",
-  hero_subtitle:"Chaque seconde, Eco'clock réunit les registres publics sur les forêts, les récifs, la glace, l'eau, l'énergie et la criminalité environnementale dans un seul tableau de bord. Regardez. Partagez. Agissez.",
+  hero_subtitle:"Chaque seconde, Eco'clock rassemble des données publiques sur les forêts, les champignons, la glace, l'eau, l'énergie et les crimes environnementaux au sein d'un tableau de bord unique. Visualisez. Partagez. Agissez.",
   badge_beta:"BÊTA", download_beta:"Télécharger la bêta", hero_scroll_cta:"Voir l'état de la planète", hero_sos_cta:"S.O.S.",
   status_eyebrow:"État actuel", status_title:"Deux signaux à surveiller de près",
   status_subtitle:"La déforestation et la régression des herbiers de posidonie concentrent le plus grand risque de perte irréversible. Les autres indicateurs complètent le tableau.",
@@ -1245,6 +1255,8 @@ fr:{translation:{
   card_deforestation_title:"Déforestation", card_deforestation_desc:"Alertes de perte de couvert arboré détectées par satellite.",
   stat_area_lost:"Surface perdue (24 h, estimation)", stat_alerts:"Alertes GLAD actives", stat_top_region:"Région la plus alertée",
   status_demo:"Démo", last_updated:"Mis à jour", next_update:"Prochaine mise à jour",
+  card_fungi_title:"Biodiversité des champignons", card_fungi_desc:"Observations de science citoyenne du règne Fungi en Espagne (iNaturalist).",
+  stat_fungi_obs_7d:"Observations (7 jours)", stat_fungi_species_30d:"Espèces distinctes (30 jours)", stat_fungi_gbif:"Enregistrements GBIF (Espagne)",
   card_coral_title:"Récifs coralliens", card_coral_desc:"Stress thermique et blanchissement sur les récifs surveillés.",
   stat_bleaching:"Niveau de blanchissement", stat_reef_stress:"Récifs sous stress thermique", stat_watch_region:"Région sous surveillance",
   card_posidonia_title:"Posidonie océanique", card_posidonia_desc:"Superficie cartographiée des herbiers de Posidonia oceanica, plante endémique de la Méditerranée, relevée par les organismes officiels.",
@@ -1303,7 +1315,7 @@ de:{translation:{
   hero_local_time_label:"Deine Ortszeit",
   hero_eyebrow:"Umweltmonitor in Echtzeit · 2026",
   hero_title_line1:"Der Planet blutet.", hero_title_line2:"Die Daten lügen nicht.",
-  hero_subtitle:"Jede Sekunde bündelt Eco'clock öffentliche Daten zu Wäldern, Riffen, Eis, Wasser, Energie und Umweltkriminalität in einem einzigen Dashboard. Beobachten. Teilen. Handeln.",
+  hero_subtitle:"Jede Sekunde bündelt Eco'clock öffentliche Daten zu Wäldern, Pilzen, Eis, Wasser, Energie und Umweltkriminalität auf einem einzigen Dashboard. Ansehen. Teilen. Handeln.",
   badge_beta:"BETA", download_beta:"Beta herunterladen", hero_scroll_cta:"Zustand des Planeten ansehen", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Aktueller Stand", status_title:"Zwei Signale, die uns am meisten beunruhigen",
   status_subtitle:"Entwaldung und der Rückgang der Posidonia-Wiesen bergen das größte Risiko irreversibler Verluste. Die übrigen Indikatoren vervollständigen das Bild.",
@@ -1311,6 +1323,8 @@ de:{translation:{
   card_deforestation_title:"Entwaldung", card_deforestation_desc:"Satellitengestützte Warnungen zum Verlust der Baumbedeckung.",
   stat_area_lost:"Verlorene Fläche (24 Std., geschätzt)", stat_alerts:"Aktive GLAD-Warnungen", stat_top_region:"Region mit den meisten Warnungen",
   status_demo:"Demo", last_updated:"Aktualisiert", next_update:"Nächste Aktualisierung",
+  card_fungi_title:"Pilz-Biodiversität", card_fungi_desc:"Citizen-Science-Beobachtungen des Reichs Fungi in Spanien (iNaturalist).",
+  stat_fungi_obs_7d:"Beobachtungen (7 Tage)", stat_fungi_species_30d:"Unterschiedliche Arten (30 Tage)", stat_fungi_gbif:"GBIF-Datensätze (Spanien)",
   card_coral_title:"Korallenriffe", card_coral_desc:"Hitzestress und Bleiche in den überwachten Riffen.",
   stat_bleaching:"Bleichgrad", stat_reef_stress:"Riffe unter Hitzestress", stat_watch_region:"Beobachtete Region",
   card_posidonia_title:"Neptungras (Posidonia)", card_posidonia_desc:"Kartierte Fläche der Posidonia-oceanica-Wiesen, einer im Mittelmeer endemischen Seegrasart, erfasst von offiziellen Kartierungsstellen.",
@@ -1369,7 +1383,7 @@ it:{translation:{
   hero_local_time_label:"La tua ora locale",
   hero_eyebrow:"Monitor ambientale in tempo reale · 2026",
   hero_title_line1:"Il pianeta sanguina.", hero_title_line2:"I dati non mentono.",
-  hero_subtitle:"Ogni secondo, Eco'clock riunisce i registri pubblici su foreste, barriere coralline, ghiaccio, acqua, energia e reati ambientali in un'unica dashboard. Guarda. Condividi. Agisci.",
+  hero_subtitle:"Ogni secondo, Eco'clock raccoglie dati pubblici su foreste, funghi, ghiacci, acqua, energia e crimini ambientali in un'unica dashboard. Guarda. Condividi. Agisci.",
   badge_beta:"BETA", download_beta:"Scarica la Beta", hero_scroll_cta:"Guarda lo stato del pianeta", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Stato attuale", status_title:"Due segnali che ci preoccupano di più",
   status_subtitle:"La deforestazione e la regressione delle praterie di posidonia concentrano il rischio più alto di perdita irreversibile. Gli altri indicatori completano il quadro.",
@@ -1377,6 +1391,8 @@ it:{translation:{
   card_deforestation_title:"Deforestazione", card_deforestation_desc:"Allarmi di perdita di copertura arborea rilevati via satellite.",
   stat_area_lost:"Superficie persa (24 h, stima)", stat_alerts:"Allarmi GLAD attivi", stat_top_region:"Regione con più allarmi",
   status_demo:"Demo", last_updated:"Aggiornato", next_update:"Prossimo aggiornamento",
+  card_fungi_title:"Biodiversità dei funghi", card_fungi_desc:"Osservazioni di citizen science del regno Fungi in Spagna (iNaturalist).",
+  stat_fungi_obs_7d:"Osservazioni (7 giorni)", stat_fungi_species_30d:"Specie distinte (30 giorni)", stat_fungi_gbif:"Record GBIF (Spagna)",
   card_coral_title:"Barriere coralline", card_coral_desc:"Stress termico e sbiancamento nelle barriere monitorate.",
   stat_bleaching:"Livello di sbiancamento", stat_reef_stress:"Barriere sotto stress termico", stat_watch_region:"Regione sotto osservazione",
   card_posidonia_title:"Posidonia oceanica", card_posidonia_desc:"Superficie cartografata delle praterie di Posidonia oceanica, pianta endemica del Mediterraneo, rilevata dagli enti ufficiali.",
@@ -1435,7 +1451,7 @@ pt:{translation:{
   hero_local_time_label:"Sua hora local",
   hero_eyebrow:"Monitor ambiental em tempo real · 2026",
   hero_title_line1:"O planeta está sangrando.", hero_title_line2:"Os dados não mentem.",
-  hero_subtitle:"A cada segundo, o Eco'clock reúne registros públicos de florestas, recifes, gelo, água, energia e crimes ambientais em um único painel. Veja. Compartilhe. Aja.",
+  hero_subtitle:"A cada segundo, o Eco'clock reúne registros públicos sobre florestas, fungos, gelo, água, energia e crimes ambientais em um único painel. Visualize. Compartilhe. Aja.",
   badge_beta:"BETA", download_beta:"Baixar Beta", hero_scroll_cta:"Ver o estado do planeta", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Estado atual", status_title:"Dois sinais que mais preocupam",
   status_subtitle:"O desmatamento e a regressão dos prados de posidónia concentram o maior risco de perda irreversível. Os demais indicadores completam o panorama.",
@@ -1443,6 +1459,8 @@ pt:{translation:{
   card_deforestation_title:"Desmatamento", card_deforestation_desc:"Alertas de perda de cobertura arbórea detectados por satélite.",
   stat_area_lost:"Área perdida (24 h, estimado)", stat_alerts:"Alertas GLAD ativos", stat_top_region:"Região com mais alertas",
   status_demo:"Demo", last_updated:"Atualizado", next_update:"Próxima atualização",
+  card_fungi_title:"Biodiversidade de fungos", card_fungi_desc:"Observações de ciência cidadã do reino Fungi em Espanha (iNaturalist).",
+  stat_fungi_obs_7d:"Observações (7 dias)", stat_fungi_species_30d:"Espécies distintas (30 dias)", stat_fungi_gbif:"Registos GBIF (Espanha)",
   card_coral_title:"Recifes de coral", card_coral_desc:"Estresse térmico e branqueamento nos recifes monitorados.",
   stat_bleaching:"Nível de branqueamento", stat_reef_stress:"Recifes sob estresse térmico", stat_watch_region:"Região sob observação",
   card_posidonia_title:"Posidonia oceânica", card_posidonia_desc:"Superfície cartografada dos prados de Posidonia oceanica, planta endémica do Mediterrâneo, levantada por organismos oficiais.",
@@ -1501,7 +1519,7 @@ zh:{translation:{
   hero_local_time_label:"您的当地时间",
   hero_eyebrow:"实时环境监测 · 2026",
   hero_title_line1:"地球在流血。", hero_title_line2:"数据不会说谎。",
-  hero_subtitle:"Eco'clock 每一秒都在汇集森林、珊瑚礁、冰层、水资源、能源和环境犯罪的公开数据，呈现在一个仪表盘中。查看。分享。行动。",
+  hero_subtitle:"Eco'clock 每時每刻都在匯集關於森林、真菌、冰層、水資源、能源及環境犯罪的公開數據，並將其整合至統一的儀錶板中。查看。分享。行動。",
   badge_beta:"测试版", download_beta:"下载测试版", hero_scroll_cta:"查看地球现状", hero_sos_cta:"S.O.S.",
   status_eyebrow:"当前状态", status_title:"最值得关注的两个信号",
   status_subtitle:"森林砍伐和波喜荡草草甸的退化带来的不可逆损失风险最高，其余指标则补全了全貌。",
@@ -1509,6 +1527,8 @@ zh:{translation:{
   card_deforestation_title:"森林砍伐", card_deforestation_desc:"卫星监测到的树木覆盖损失警报。",
   stat_area_lost:"损失面积（24 小时，估算）", stat_alerts:"活跃 GLAD 警报数", stat_top_region:"警报最多的地区",
   status_demo:"演示", last_updated:"更新时间", next_update:"下次更新",
+  card_fungi_title:"真菌生物多样性", card_fungi_desc:"西班牙真菌界公民科学观测（iNaturalist）。",
+  stat_fungi_obs_7d:"观测数（7天）", stat_fungi_species_30d:"不同物种数（30天）", stat_fungi_gbif:"GBIF 记录（西班牙）",
   card_coral_title:"珊瑚礁", card_coral_desc:"受监测珊瑚礁的热应激与白化情况。",
   stat_bleaching:"白化程度", stat_reef_stress:"受热应激的珊瑚礁比例", stat_watch_region:"重点监测地区",
   card_posidonia_title:"海洋波喜荡草（Posidonia）", card_posidonia_desc:"地中海特有海草 Posidonia oceanica 草甸的官方测绘面积。",
@@ -1567,7 +1587,7 @@ ja:{translation:{
   hero_local_time_label:"現地時刻",
   hero_eyebrow:"リアルタイム環境モニター · 2026",
   hero_title_line1:"地球は血を流している。", hero_title_line2:"データは嘘をつかない。",
-  hero_subtitle:"Eco'clockは、毎秒、森林・サンゴ礁・氷・水・エネルギー・環境犯罪に関する公開データをひとつのダッシュボードに集約します。見る。共有する。行動する。",
+  hero_subtitle:"Eco'clockは刻一刻と、森林、菌類、氷、水、エネルギー、そして環境犯罪に関する公開データを収集し、一つのダッシュボードに集約します。見て、共有し、行動を起こしましょう。",
   badge_beta:"ベータ", download_beta:"ベータ版をダウンロード", hero_scroll_cta:"地球の現状を見る", hero_sos_cta:"S.O.S.",
   status_eyebrow:"現在の状況", status_title:"特に注視すべき2つの兆候",
   status_subtitle:"森林伐採とポシドニア群落の減少は、不可逆的な損失のリスクが最も高い指標です。その他の指標が全体像を補います。",
@@ -1575,6 +1595,8 @@ ja:{translation:{
   card_deforestation_title:"森林伐採", card_deforestation_desc:"衛星が検知した樹木被覆の減少アラート。",
   stat_area_lost:"喪失面積（24時間、推定）", stat_alerts:"有効なGLADアラート数", stat_top_region:"アラートが最も多い地域",
   status_demo:"デモ", last_updated:"更新日時", next_update:"次回更新",
+  card_fungi_title:"菌類の生物多様性", card_fungi_desc:"スペインにおける菌界（Fungi）の市民科学観測（iNaturalist）。",
+  stat_fungi_obs_7d:"観測数（7日）", stat_fungi_species_30d:"異なる種数（30日）", stat_fungi_gbif:"GBIF記録（スペイン）",
   card_coral_title:"サンゴ礁", card_coral_desc:"監視対象のサンゴ礁における熱ストレスと白化の状況。",
   stat_bleaching:"白化レベル", stat_reef_stress:"熱ストレス下のサンゴ礁の割合", stat_watch_region:"注視地域",
   card_posidonia_title:"ポシドニア（海草）", card_posidonia_desc:"地中海固有の海草ポシドニア・オセアニカの群落について、公的機関が測量した分布面積。",
@@ -1633,7 +1655,7 @@ ru:{translation:{
   hero_local_time_label:"Ваше местное время",
   hero_eyebrow:"Экологический монитор в реальном времени · 2026",
   hero_title_line1:"Планета истекает кровью.", hero_title_line2:"Данные не лгут.",
-  hero_subtitle:"Каждую секунду Eco'clock объединяет открытые данные о лесах, рифах, льдах, воде, энергетике и экологических преступлениях на одной панели. Смотрите. Делитесь. Действуйте.",
+  hero_subtitle:"Каждую секунду Eco'clock собирает общедоступные данные о лесах, грибах, льдах, водных ресурсах, энергетике и экологических преступлениях на единой информационной панели. Смотрите. Делитесь. Действуйте.",
   badge_beta:"БЕТА", download_beta:"Скачать бету", hero_scroll_cta:"Смотреть состояние планеты", hero_sos_cta:"S.O.S.",
   status_eyebrow:"Текущее состояние", status_title:"Два сигнала, которые тревожат больше всего",
   status_subtitle:"Вырубка лесов и сокращение лугов посидонии несут наибольший риск необратимых потерь. Остальные показатели дополняют картину.",
@@ -1641,6 +1663,8 @@ ru:{translation:{
   card_deforestation_title:"Вырубка лесов", card_deforestation_desc:"Спутниковые оповещения о потере древесного покрова.",
   stat_area_lost:"Утраченная площадь (24 ч, оценка)", stat_alerts:"Активные оповещения GLAD", stat_top_region:"Регион с наибольшим числом оповещений",
   status_demo:"Демо", last_updated:"Обновлено", next_update:"Следующее обновление",
+  card_fungi_title:"Биоразнообразие грибов", card_fungi_desc:"Наблюдения гражданской науки царства Fungi в Испании (iNaturalist).",
+  stat_fungi_obs_7d:"Наблюдения (7 дней)", stat_fungi_species_30d:"Различных видов (30 дней)", stat_fungi_gbif:"Записи GBIF (Испания)",
   card_coral_title:"Коралловые рифы", card_coral_desc:"Тепловой стресс и обесцвечивание на наблюдаемых рифах.",
   stat_bleaching:"Уровень обесцвечивания", stat_reef_stress:"Рифы в состоянии теплового стресса", stat_watch_region:"Регион под наблюдением",
   card_posidonia_title:"Посидония океаническая", card_posidonia_desc:"Картографированная площадь лугов Posidonia oceanica — эндемичного средиземноморского морского растения, по данным официальных ведомств.",
@@ -1699,7 +1723,7 @@ ar:{translation:{
   hero_local_time_label:"توقيتك المحلي",
   hero_eyebrow:"مراقبة بيئية في الوقت الفعلي · 2026",
   hero_title_line1:"الكوكب ينزف.", hero_title_line2:"البيانات لا تكذب.",
-  hero_subtitle:"في كل ثانية، يجمع Eco'clock سجلات عامة عن الغابات والشعاب المرجانية والجليد والمياه والطاقة والجرائم البيئية في لوحة واحدة. شاهد. شارك. تحرّك.",
+  hero_subtitle:"في كل ثانية، تجمع منصة Eco'clock السجلات العامة المتعلقة بالغابات والفطريات والجليد والمياه والطاقة والجرائم البيئية في لوحة تحكم موحدة. اطّلع. شارك. بادر.",
   badge_beta:"تجريبي", download_beta:"تنزيل النسخة التجريبية", hero_scroll_cta:"عرض حالة الكوكب", hero_sos_cta:"S.O.S.",
   status_eyebrow:"الحالة الراهنة", status_title:"إشارتان تستحقان أكبر قدر من الاهتمام",
   status_subtitle:"تركّز إزالة الغابات وتراجع مروج البوسيدونيا أكبر قدر من مخاطر الفقدان الذي لا يمكن تداركه، بينما تكمل بقية المؤشرات الصورة العامة.",
@@ -1707,6 +1731,8 @@ ar:{translation:{
   card_deforestation_title:"إزالة الغابات", card_deforestation_desc:"تنبيهات بفقدان الغطاء الشجري تُرصد عبر الأقمار الصناعية.",
   stat_area_lost:"المساحة المفقودة (24 ساعة، تقديري)", stat_alerts:"تنبيهات GLAD النشطة", stat_top_region:"المنطقة الأكثر تنبيهًا",
   status_demo:"تجريبي", last_updated:"آخر تحديث", next_update:"التحديث القادم",
+  card_fungi_title:"تنوع الفطريات", card_fungi_desc:"ملاحظات العلوم المواطنية لمملكة الفطريات في إسبانيا (iNaturalist).",
+  stat_fungi_obs_7d:"ملاحظات (7 أيام)", stat_fungi_species_30d:"أنواع مختلفة (30 يوماً)", stat_fungi_gbif:"سجلات GBIF (إسبانيا)",
   card_coral_title:"الشعاب المرجانية", card_coral_desc:"الإجهاد الحراري وابيضاض المرجان في الشعاب المراقَبة.",
   stat_bleaching:"مستوى الابيضاض", stat_reef_stress:"الشعاب الواقعة تحت إجهاد حراري", stat_watch_region:"المنطقة قيد المراقبة",
   card_posidonia_title:"عشب البوسيدونيا البحري", card_posidonia_desc:"المساحة المرصودة لمروج نبات Posidonia oceanica، وهو نبات بحري متوطن في البحر المتوسط، وفق الهيئات الرسمية.",
@@ -1768,7 +1794,7 @@ ar:{translation:{
 const DATA_BASE = {
   deforestation: { areaLost: 6140, alerts: 18420, intervalHours: 6, jitter: 0.05 },
   posidonia:     { surface: 55368, intervalHours: 168, jitter: 0.004 },
-  coral:         { reefStress: 34, intervalHours: 7, jitter: 0.06 },
+  fungi:         { obs7d: 280, species30d: 165, gbifCount: 850000, intervalHours: 24, jitter: 0.08 },
   energy:        { co2: 36.8, renewables: 30.9, intervalHours: 9, jitter: 0.02 },
   water:         { stress: 18.6, withdrawal: 70, intervalHours: 10, jitter: 0.03 },
   ice:           { extent: 9.2, anomaly: 1.4, intervalHours: 8, jitter: 0.03 },
@@ -1856,9 +1882,11 @@ function computeCardValues(id, prev, manual){
       v.surface = applyTrend(jitterVal(base.surface, base.jitter));
       if(isAnomaly) v.surface = Math.max(0, v.surface * (1 - Math.abs(anomalyFactor)*0.03));
       break;
-    case 'coral':
-      v.reefStress = applyTrend(jitterVal(base.reefStress, base.jitter));
-      if(isAnomaly) v.reefStress = Math.min(100, v.reefStress * (1 + Math.abs(anomalyFactor)*0.35));
+    case 'fungi':
+      v.obs7d = applyTrend(jitterVal(base.obs7d, base.jitter));
+      v.species30d = applyTrend(jitterVal(base.species30d, base.jitter));
+      v.gbifCount = applyTrend(jitterVal(base.gbifCount, base.jitter * 0.3));
+      if(isAnomaly){ v.obs7d *= (1 + Math.abs(anomalyFactor)*0.35); v.species30d *= (1 + Math.abs(anomalyFactor)*0.2); }
       break;
     case 'energy':
       v.co2 = applyTrend(jitterVal(base.co2, base.jitter));
@@ -1909,8 +1937,10 @@ function renderCard(id){
       setStat('regression', i18next.t('val_posidonia_regression'));
       setStat('region', i18next.t('val_posidonia_region'));
       break;
-    case 'coral':
-      setStat('reefStress', fmtDec(v.reefStress, locale, 0) + '%');
+    case 'fungi':
+      setStat('obs7d', fmtInt(v.obs7d, locale));
+      setStat('species30d', fmtInt(v.species30d, locale));
+      setStat('gbifCount', fmtInt(v.gbifCount, locale));
       break;
     case 'energy':
       setStat('co2', fmtDec(v.co2, locale, 1) + ' ' + unitGt);
@@ -2131,6 +2161,57 @@ function initClock(){
     }catch(e){ console.warn('OzoneWatch fail (CORS?)', e.message); liveValues.ozone._live = false; return false; }                                                                                                  
   }                                                                                                                                                                                                                 
                                                                                                                                                                                                                     
+
+  /* iNaturalist — Fungi (taxon_id=47170), España (place_id=6753) */
+  async function fetchFungi(){
+    try{
+      if(!liveValues.fungi) liveValues.fungi = {};
+      const today = new Date();
+      const d7 = new Date(today); d7.setDate(today.getDate() - 7);
+      const d30 = new Date(today); d30.setDate(today.getDate() - 30);
+      const iso = (d) => d.toISOString().slice(0, 10);
+
+      const [obsRes, spRes, gbifRes] = await Promise.all([
+        fetch(`https://api.inaturalist.org/v1/observations?taxon_id=47170&place_id=6753&d1=${iso(d7)}&d2=${iso(today)}&per_page=0`),
+        fetch(`https://api.inaturalist.org/v1/observations/species_counts?taxon_id=47170&place_id=6753&d1=${iso(d30)}&d2=${iso(today)}&per_page=1`),
+        fetch('https://api.gbif.org/v1/occurrence/search?country=ES&taxonKey=5&hasCoordinate=true&limit=0')
+      ]);
+
+      let anyOk = false;
+
+      if(obsRes.ok){
+        const obsData = await obsRes.json();
+        if(typeof obsData.total_results === 'number'){
+          liveValues.fungi.obs7d = obsData.total_results;
+          anyOk = true;
+        }
+      }
+      if(spRes.ok){
+        const spData = await spRes.json();
+        if(typeof spData.total_results === 'number'){
+          liveValues.fungi.species30d = spData.total_results;
+          anyOk = true;
+        }
+      }
+      if(gbifRes.ok){
+        const gbifData = await gbifRes.json();
+        if(typeof gbifData.count === 'number'){
+          liveValues.fungi.gbifCount = gbifData.count;
+          anyOk = true;
+        }
+      }
+
+      if(!anyOk) throw new Error('ninguna fuente de Fungi respondió');
+      liveValues.fungi._live = true;
+      liveValues.fungi.lastUpdated = Date.now();
+      scheduleNext('fungi');
+      return true;
+    }catch(e){
+      console.warn('Fungi hybrid fetch fail', e.message);
+      if(liveValues.fungi) liveValues.fungi._live = false;
+      return false;
+    }
+  }
   function showOfflineBanner(active){                                                                                                                                                                               
     const el = document.getElementById('statusBanner');                                                                                                                                                             
     if(!el) return;                                                                                                                                                                                                 
@@ -2143,7 +2224,7 @@ function initClock(){
     if(!liveValues.water) liveValues.water = {};                                                                                                                                                                    
     if(!liveValues.ozone) liveValues.ozone = {};                                                                                                                                                                    
     const results = await Promise.all([                                                                                                                                                                             
-      fetchEonet(), fetchWorldBankEnergy(), fetchWorldBankWater(), fetchOzoneWatch()                                                                                                                                
+      fetchEonet(), fetchWorldBankEnergy(), fetchWorldBankWater(), fetchOzoneWatch(), fetchFungi()                                                                                                                                
     ]);                                                                                                                                                                                                             
     showOfflineBanner(results.some(r => !r));                                                                                                                                                                       
     renderAllCards();                                                                                                                                                                                               
